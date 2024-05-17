@@ -1,7 +1,10 @@
+// import Dashboard from "../views/Dashboard";
+
 const routes = {
   '/': '<h2>Home</h2><p>Welcome to the home page!</p>',
   '/about': '<h2>About</h2><p>Learn more about us on this page.</p>',
   '/whoWeAre': '<h2>Who We Are</h2><p>Get in touch with us!</p>',
+  // '/whoWeAre': Dashboard,
   '/login': '<h2>Login Page</h2><p>Authentication form comming soon</p>',
   '/SignUp': '<h2>Sign Up Page</h2><p>Authentication form comming soon</p>',
 };
