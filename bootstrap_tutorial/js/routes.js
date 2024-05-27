@@ -5,8 +5,9 @@ const routes = {
     'home': 'js/home.js',
     'about': 'js/about.js',
     'whoWeAre': 'js/whoWeAre.js',
+    'pong': 'js/pong.js',
     'login': 'js/login.js',
-    'SignUp': 'js/pong.js',
+    'SignUp': 'js/login.js',
 };
 
 const renderRoute = (path) => {
