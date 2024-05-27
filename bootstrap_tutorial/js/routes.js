@@ -1,14 +1,13 @@
 'use strict'
 
 const routes = {
-    '/': './home.js',
-    '/home': './home.js',
-    '/about': './about.js',
-    '/whoWeAre': './whoWeAre.js',
-    '/login': './login.js',
-    '/SignUp': './pong.js',
+    '': './home.js',
+    'home': './home.js',
+    'about': './about.js',
+    'whoWeAre': './whoWeAre.js',
+    'login': './login.js',
+    'SignUp': './pong.js',
 };
-
 
 function navigateTo(path) {
     const scriptPath = routes[path];
@@ -29,10 +28,15 @@ function navigateTo(path) {
         });
 }
 
-
-document.querySelectorAll('a[href]').forEach(anchor => {
-    anchor.addEventListener('click', event => {
-        event.preventDefault();
-        navigateTo(event.target.href);
+document.addEventListener('DOMContentLoaded', () => {
+    navigateTo('');
+    document.querySelectorAll('a[href]').forEach(anchor => {
+        anchor.addEventListener('click', event => {
+            event.preventDefault();
+            const path = event.target.getAttribute('href');
+            window.history.pushState({}, window.location.origin + '/' + path);
+            navigateTo(path);
+        });
     });
+
 });
