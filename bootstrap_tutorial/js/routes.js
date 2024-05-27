@@ -1,12 +1,12 @@
-'use strict'
+'use strict';
 
 const routes = {
-    '': '../js/home.js',
-    'home': '../js/home.js',
-    'about': '../js/about.js',
-    'whoWeAre': '../js/whoWeAre.js',
-    'login': '../js/login.js',
-    'SignUp': '../js/pong.js',
+    '': 'js/home.js',
+    'home': 'js/home.js',
+    'about': 'js/about.js',
+    'whoWeAre': 'js/whoWeAre.js',
+    'login': 'js/login.js',
+    'SignUp': 'js/pong.js',
 };
 
 const renderRoute = (path) => {
@@ -23,7 +23,7 @@ const renderRoute = (path) => {
         .then(scriptText => {
             const script = document.createElement('script');
             script.textContent = scriptText;
-            // appDiv.appendChild(script);
+            appDiv.appendChild(script);
         })
         .catch(error => {
             console.error(`Error loading script for ${path}: ${error}`);
@@ -41,25 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const path = event.target.getAttribute('href');
 
-            window.history.pushState({}, window.location.origin + '/' + path);
+            window.history.pushState({ path }, null, path);
 
             renderRoute(path);
         });
     });
 
     // Handle the browser's back and forward buttons
-    window.addEventListener('popstate', () => {
-        renderRoute(window.location.pathname);
+    window.addEventListener('popstate', event => {
+        const path = event.state && event.state.path ? event.state.path : window.location.pathname;
+
+        renderRoute(path);
     });
-
-    // Call renderRoute whenever the pathname changes
-    setInterval(() => {
-        const currentPath = window.location.pathname;
-        if (currentPath !== lastPath) {
-            lastPath = currentPath;
-            renderRoute(currentPath);
-        }
-    }, 100);
-
-    let lastPath = window.location.pathname;
 });
