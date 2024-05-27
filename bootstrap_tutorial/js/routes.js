@@ -11,6 +11,7 @@ const routes = {
 
 function navigateTo(path) {
     const scriptPath = routes[path];
+
     if (!scriptPath) {
         console.error(`No script found for path ${path}`);
         return;
@@ -21,7 +22,6 @@ function navigateTo(path) {
         .then(scriptText => {
             const appDiv = document.getElementById('app');
             appDiv.innerHTML += scriptText;
-            // document.body.appendChild(appDiv);
         })
         .catch(error => {
             console.error(`Error loading script for ${path}: ${error}`);
@@ -29,12 +29,19 @@ function navigateTo(path) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    navigateTo('');
+    // load initial route
+    navigateTo('home');
+
+    // Handle navigation
     document.querySelectorAll('a[href]').forEach(anchor => {
+
         anchor.addEventListener('click', event => {
             event.preventDefault();
+
             const path = event.target.getAttribute('href');
+
             window.history.pushState({}, window.location.origin + '/' + path);
+
             navigateTo(path);
         });
     });
