@@ -1,13 +1,38 @@
+'use strict'
+
 const routes = {
-    '/': '<h2>Home</h2><p>Welcome to the home page!</p>',
-    '/about': '<h2>About</h2><p>Learn more about us on this page.</p>',
-    '/whoWeAre': '<h2>Who We Are</h2><p>Get in touch with us!</p>',
-    // '/whoWeAre': Dashboard,
-    '/login': '<h2>Login Page</h2><p>Authentication form comming soon</p>',
-    '/SignUp': '<h2>Sign Up Page</h2><p>Authentication form comming soon</p>',
+    '/': './home.js',
+    '/home': './home.js',
+    '/about': './about.js',
+    '/whoWeAre': './whoWeAre.js',
+    '/login': './login.js',
+    '/SignUp': './pong.js',
 };
 
-const renderRoute = (path) => {
-    const appDiv = document.getElementById('app');
-    appDiv.innerHTML = routes[path] || '<h2>404</h2><p>Page not found</p>';
-};
+
+function navigateTo(path) {
+    const scriptPath = routes[path];
+    if (!scriptPath) {
+        console.error(`No script found for path ${path}`);
+        return;
+    }
+
+    fetch(scriptPath)
+        .then(response => response.text())
+        .then(scriptText => {
+            const appDiv = document.getElementById('app');
+            appDiv.innerHTML += scriptText;
+            // document.body.appendChild(appDiv);
+        })
+        .catch(error => {
+            console.error(`Error loading script for ${path}: ${error}`);
+        });
+}
+
+
+document.querySelectorAll('a[href]').forEach(anchor => {
+    anchor.addEventListener('click', event => {
+        event.preventDefault();
+        navigateTo(event.target.href);
+    });
+});
