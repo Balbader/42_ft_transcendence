@@ -1,1 +1,9 @@
 /* styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    flex-shrink: 0;
+}
