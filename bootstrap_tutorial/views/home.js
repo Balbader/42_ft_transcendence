@@ -1,4 +1,5 @@
 'use strict'
 
-console.log('Home Page script loaded!');
-document.getElementById('app').innerHTML += '<p>Welcome to the Home page.</p>';
+let app = document.getElementById('app');
+const header = document.createElement('div');
+app.appendChild(header);

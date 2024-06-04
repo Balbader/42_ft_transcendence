@@ -1,6 +1,7 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
+
     // load initial route
     renderRoute(window.location.pathname);
 
