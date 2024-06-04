@@ -17,7 +17,7 @@ const renderRoute = (path) => {
     // clear the appDiv's content before loading the new script
     while (appDiv.firstChild) {
         appDiv.removeChild(appDiv.firstChild);
-    }
+    };
 
     fetch(scriptPath)
         .then(response => response.text())
