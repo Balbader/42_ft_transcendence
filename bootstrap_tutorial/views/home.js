@@ -1,5 +1,7 @@
 'use strict'
 
 let app = document.getElementById('app');
-const header = document.createElement('div');
+let header = document.createElement('div');
+let div = `<div class=""></div>`
+
 app.appendChild(header);
