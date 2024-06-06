@@ -55,6 +55,7 @@ const loginMarkup = `
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
             </div>
+
             <div class="form-floating">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
@@ -66,6 +67,7 @@ const loginMarkup = `
                     Remember me
                 </label>
             </div>
+
             <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
         </form>
     </main>
