@@ -1,4 +1,26 @@
 'use strict'
 
-console.log('Login Page script loaded!');
-document.getElementById('app').innerHTML += '<p>this is the login page bitch.</p>';
+document.getElementById('app').innerHTML += `
+        <div class="signup-login-form">
+            <form action="" class="form">
+                <h1 class="form-title">Login</h1>
+                <p class="form-description">Enter your details to register a new account.</p>
+
+                <div class="input-container">
+                    <span class="bx--user"></span>
+                    <input type="text" id="username" class="input" placeholder="Username or Email">
+                </div>
+
+                <div class="input-container">
+                    <span class="mdi--password-outline"></span>
+                    <input type="password" id="password" class="input" placeholder="Password">
+                </div>
+
+                <input type="submit" onclick="submitForm(event)" class="signup-button" value="Login">
+                <div class="divider"></div>
+                <div class="prompt">Don't have an account yet? <a href="home">Sign Up</a></div>
+                <div id="login-error" class="error"></div>
+            </form>
+        </div>
+    `;
+
