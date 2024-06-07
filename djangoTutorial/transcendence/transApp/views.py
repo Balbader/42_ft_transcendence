@@ -1,8 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
 
 # Create your views here.
 def home(request):
-    template = loader.get_template("transApp/home.html")
-    return HttpResponse(template.render())
+    context = {"name": "Basil Alba"}
+    return render(request, "transApp/home.html", context)
