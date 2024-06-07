@@ -3,31 +3,31 @@
 import { renderRoute, router } from "../views/routes.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // load initial route
-  renderRoute(window.location.pathname);
+    // load initial route
+    renderRoute(window.location.pathname);
 
-  // Handle navigation
-  window.addEventListener("click", (event) => {
-    const isAnchor = event.target.nodeName === "a";
+    // Handle navigation
+    window.addEventListener("click", (event) => {
+        const isAnchor = event.target.nodeName === "a";
 
-    if (!isAnchor) return;
+        if (!isAnchor) return;
 
-    event.preventDefault();
+        event.preventDefault();
 
-    const path = event.target.getAttribute("href");
+        const path = event.target.getAttribute("href");
 
-    router.goTo(path);
+        router.goTo(path);
 
-    renderRoute(path);
-  });
+        renderRoute(path);
+    });
 
-  // Handle the browser's back and forward buttons
-  window.addEventListener("popstate", (event) => {
-    const path =
-      event.state && event.state.path
-        ? event.state.path
-        : window.location.pathname;
+    // Handle the browser's back and forward buttons
+    window.addEventListener("popstate", (event) => {
+        const path =
+            event.state && event.state.path
+                ? event.state.path
+                : window.location.pathname;
 
-    renderRoute(path);
-  });
+        renderRoute(path);
+    });
 });
