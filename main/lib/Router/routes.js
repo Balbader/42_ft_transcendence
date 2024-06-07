@@ -34,17 +34,11 @@ const router = Router();
 
 const renderRoute = async () => {
     const scriptPath = routes[router.currentRoute()]; // use the default route if no script is found for the path
-    const appDiv = document.getElementById("app");
-
-    // clear the appDiv's content before loading the new script
-    while (appDiv.firstChild) {
-        appDiv.removeChild(appDiv.firstChild);
-    }
-
-    const response = await fetch(scriptPath);
-    const script = document.createElement("script");
-    script.textContent = await response.text();
-    appDiv.appendChild(script);
+    const appDiv = document.getElementById('app');
+    console.log(appDiv);
+    const view = await import(scriptPath);
+    console.log(view);
+    appDiv.innerHTML = view();
 };
 
 export { renderRoute, router };

@@ -1,4 +1,7 @@
-'use strict'
+const about = () => {
+    const div = document.createElement('div');
+    div.textContent = 'hello from the about page.';
+    return div;
+};
 
-console.log('About Page script loaded!');
-document.getElementById('app').innerHTML += '<p>Welcome to the About page.</p>';
+export default about;
