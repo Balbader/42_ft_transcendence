@@ -1,6 +1,4 @@
-"use strict";
-
-import { renderRoute, router } from "../views/routes.js";
+import { renderRoute, router } from "./lib/routes.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     // load initial route
