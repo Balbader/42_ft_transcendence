@@ -1,32 +1,51 @@
-'use strict';
-
 const routes = {
-    '': 'views/home.js',
-    'home': 'views/home.js',
-    'about': 'views/about.js',
-    'whoWeAre': 'views/whoWeAre.js',
-    'pong': 'views/pong.js',
-    'login': 'views/login.js',
-    'SignUp': 'views/login.js',
+  "": "views/home.js",
+  home: "views/home.js",
+  about: "views/about.js",
+  whoWeAre: "views/whoWeAre.js",
+  pong: "views/pong.js",
+  login: "views/login.js",
 };
 
-const renderRoute = (path) => {
-    const scriptPath = routes[path] || routes['']; // use the default route if no script is found for the path
-    const appDiv = document.getElementById('app');
+const Router = () => {
+  const state = ["home"];
 
-    // clear the appDiv's content before loading the new script
-    while (appDiv.firstChild) {
-        appDiv.removeChild(appDiv.firstChild);
-    };
+  const goTo = (path) => {
+    state.push(path);
+  };
 
-    fetch(scriptPath)
-        .then(response => response.text())
-        .then(scriptText => {
-            const script = document.createElement('script');
-            script.textContent = scriptText;
-            appDiv.appendChild(script);
-        })
-        .catch(error => {
-            console.error(`Error loading script for ${path}: ${error}`);
-        });
+  const goBack = () => {
+    if (state.length === 1) return;
+    state.pop();
+  };
+
+  const currentRoute = () => {
+    return state.at(-1);
+  };
+
+  return {
+    goTo,
+    goBack,
+    currentRoute,
+  };
 };
+
+const router = Router();
+
+const renderRoute = async (path) => {
+  const scriptPath = routes[router.currentRoute()]; // use the default route if no script is found for the path
+  console.log(scriptPath);
+  const appDiv = document.getElementById("app");
+
+  // clear the appDiv's content before loading the new script
+  while (appDiv.firstChild) {
+    appDiv.removeChild(appDiv.firstChild);
+  }
+
+  const response = await fetch(scriptPath);
+  const script = document.createElement("script");
+  script.textContent = await response.text();
+  appDiv.appendChild(script);
+};
+
+export { renderRoute, router };

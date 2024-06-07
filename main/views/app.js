@@ -1,27 +1,33 @@
-'use strict'
+"use strict";
 
-document.addEventListener('DOMContentLoaded', () => {
+import { renderRoute, router } from "../views/routes.js";
 
-    // load initial route
-    renderRoute(window.location.pathname);
+document.addEventListener("DOMContentLoaded", () => {
+  // load initial route
+  renderRoute(window.location.pathname);
 
-    // Handle navigation
-    document.querySelectorAll('a[href]').forEach(anchor => {
-        anchor.addEventListener('click', event => {
-            event.preventDefault();
+  // Handle navigation
+  window.addEventListener("click", (event) => {
+    const isAnchor = event.target.nodeName === "a";
 
-            const path = event.target.getAttribute('href');
+    if (!isAnchor) return;
 
-            window.history.pushState({ path }, null, path);
+    event.preventDefault();
 
-            renderRoute(path);
-        });
-    });
+    const path = event.target.getAttribute("href");
 
-    // Handle the browser's back and forward buttons
-    window.addEventListener('popstate', event => {
-        const path = event.state && event.state.path ? event.state.path : window.location.pathname;
+    router.goTo(path);
 
-        renderRoute(path);
-    });
+    renderRoute(path);
+  });
+
+  // Handle the browser's back and forward buttons
+  window.addEventListener("popstate", (event) => {
+    const path =
+      event.state && event.state.path
+        ? event.state.path
+        : window.location.pathname;
+
+    renderRoute(path);
+  });
 });
