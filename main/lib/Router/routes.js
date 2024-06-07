@@ -33,13 +33,14 @@ const Router = () => {
 const router = Router();
 
 const renderRoute = async () => {
-  const scriptPath = routes[router.currentRoute()]; // use the default route if no script is found for the path
+  const scriptPath = routes[router.currentRoute()];
   const appDiv = document.getElementById("app");
   const view = await import(`http://localhost:3000/${scriptPath}`);
   const finalView = view.default();
+  appDiv.innerHTML = "";
   typeof finalView === "string"
     ? (appDiv.innerHTML = finalView)
-    : appDiv.replaceChild(view.default(), appDiv.children[0]);
+    : appDiv.appendChild(view.default());
 };
 
 export { renderRoute, router };
