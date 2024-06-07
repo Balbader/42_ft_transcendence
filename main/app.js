@@ -1,4 +1,4 @@
-import { renderRoute, router } from "./lib/routes.js";
+import { renderRoute, router } from "./lib/Router/routes.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     // load initial route
