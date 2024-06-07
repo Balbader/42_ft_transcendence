@@ -32,7 +32,7 @@ const Router = () => {
 
 const router = Router();
 
-const renderRoute = async (path) => {
+const renderRoute = async () => {
     const scriptPath = routes[router.currentRoute()]; // use the default route if no script is found for the path
     console.log(scriptPath);
     const appDiv = document.getElementById("app");
