@@ -1,6 +1,4 @@
-'use strict'
-
-if (document.getElementById('app')) {
+const pong = () => {
 
     // add CSS dynamically
     const addDynamicCSS = () => {
@@ -193,6 +191,8 @@ if (document.getElementById('app')) {
     }
 
     const framePerSecond = 50;
-    let loop = setInterval(game, 1000 / framePerSecond);
+    setInterval(game, 1000 / framePerSecond);
 
 }
+
+export default pong;

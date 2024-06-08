@@ -1,38 +1,38 @@
 import { renderRoute, router } from "./lib/Router/routes.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // load initial route
-  // renderRoute(window.location.pathname);
+    // load initial route
+    renderRoute(window.location.pathname);
 
-  // Handle navigation
-  document.addEventListener(
-    "click",
-    (event) => {
-      const isAnchor = event.target.nodeName === "A";
-      console.log(event.target);
-      console.log("isAnchor: ", isAnchor);
+    // Handle navigation
+    document.addEventListener(
+        "click",
+        (event) => {
+            const isAnchor = event.target.nodeName === "A";
+            console.log(event.target);
+            console.log("isAnchor: ", isAnchor);
 
-      if (!isAnchor) return;
-      console.log("isAnchor: ", isAnchor);
+            if (!isAnchor) return;
+            console.log("isAnchor: ", isAnchor);
 
-      event.preventDefault();
+            event.preventDefault();
 
-      const path = event.target.getAttribute("href");
+            const path = event.target.getAttribute("href");
 
-      router.goTo(path);
+            router.goTo(path);
 
-      renderRoute(path);
-    },
-    true
-  );
+            renderRoute(path);
+        },
+        true
+    );
 
-  // Handle the browser's back and forward buttons
-  // window.addEventListener("popstate", (event) => {
-  //     const path =
-  //         event.state && event.state.path
-  //             ? event.state.path
-  //             : window.location.pathname;
-  //
-  //     renderRoute(path);
-  // });
+    // Handle the browser's back and forward buttons
+    // window.addEventListener("popstate", (event) => {
+    //     const path =
+    //         event.state && event.state.path
+    //             ? event.state.path
+    //             : window.location.pathname;
+    //
+    //     renderRoute(path);
+    // });
 });
