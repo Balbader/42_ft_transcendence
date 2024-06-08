@@ -22,7 +22,7 @@ Digital Ocean: ($10 free)
 https://m.do.co/c/5424d440c63a
 
 Django Cheat Sheet:
-https://gist.github.com/bradtraversy/0df61e9b306db3d61eb24793b6b7132d
+https://gist.github.com//0df61e9b306db3d61eb24793b6b7132d
 
 Django Deploy Instructions:
 https://gist.github.com/bradtraversy/cfa565b879ff1458dba08f423cb01d71
