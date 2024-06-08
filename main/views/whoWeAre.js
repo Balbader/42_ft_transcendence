@@ -1,2 +1,7 @@
-console.log('Who We Are Page script loaded!');
-document.getElementById('app').innerHTML += '<p>Welcome to the Who We Are page.</p>';
+const whoWeAre = () => {
+    const div = document.createElement('div');
+    div.textContent = 'hello from the whoWeAre page.';
+    return div;
+};
+
+export default whoWeAre;
