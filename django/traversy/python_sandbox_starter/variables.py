@@ -19,3 +19,15 @@ y = 2.5
 name = 'Basil'
 is_cool = True
 print(x, y, name, is_cool)
+
+x = y
+print('x: ', x)
+
+# ! Check Type
+print(type(x));
+print(type(name));
+
+# ! Casting
+x = str(x);
+print('x: ', x)
+print(type(x));
