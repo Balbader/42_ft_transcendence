@@ -13,3 +13,9 @@ VARIABLE RULES:
   - Must start with a letter or an underscore
   - Can have numbers but can not start with one
 """
+ 
+x = 1
+y = 2.5
+name = 'Basil'
+is_cool = True
+print(x, y, name, is_cool)
