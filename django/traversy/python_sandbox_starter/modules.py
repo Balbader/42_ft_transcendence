@@ -9,9 +9,17 @@ from datetime import date
 import time
 from time import time
 
+# pip modules
+import camelcase
+
 # today = datetime.date.today()
 today = date.today()
-print(today);
+# print(today);
 
 timestamp = time()
-print(timestamp)
+# print(timestamp)
+
+camel = camelcase.CamelCase()
+text = 'hello there world'
+print(camel.hump(text))
+
