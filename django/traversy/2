@@ -1,0 +1,4 @@
+{% extends 'listings.html' %}
+{% load static %}
+{% block content %}
+{% endcontent %}
