@@ -5,6 +5,13 @@ A module is basically a file containing a set of functions to include in your ap
 
 # Core modules
 import datetime
+from datetime import date
+import time
+from time import time
 
-today = datetime.date.today()
+# today = datetime.date.today()
+today = date.today()
 print(today);
+
+timestamp = time()
+print(timestamp)
