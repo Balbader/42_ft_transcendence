@@ -15,4 +15,10 @@ myFile.close()
 
 # Append to file: if we don't Append, it will overwrite what was written in the file previously
 myFile = open('myFile.txt', 'a')
+myFile.write('\nI also like C.')
+myFile.close()
 
+# Read from a file
+myFile = open('myFile.txt', 'r+')
+text = myFile.read(10) # takes in the number of characters to read
+print(text)
