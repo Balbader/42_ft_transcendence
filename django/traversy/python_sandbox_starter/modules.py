@@ -3,3 +3,8 @@ A module is basically a file containing a set of functions to include in your ap
 
 """
 
+# Core modules
+import datetime
+
+today = datetime.date.today()
+print(today);
