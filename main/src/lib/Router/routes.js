@@ -1,7 +1,7 @@
-import about from "../../views/about.js";
-import home from "../../views/home.js";
-import pong from "../../views/pong.js";
-import whoWeAre from "../../views/whoWeAre.js";
+import about from "../../../views/about.js";
+import home from "../../../views/home.js";
+import pong from "../../../views/pong.js";
+import whoWeAre from "../../../views/whoWeAre.js";
 
 const routes = {
     home:home,
@@ -12,19 +12,27 @@ const routes = {
 };
 
 const Router = () => {
-    const state = ["home"];
-
+    let state = [window.location.pathname.replace("/", "home")];
+    
     const goTo = (path) => {
         state.push(path);
+        window.history.pushState({ path }, "", `/${path}`);
+        renderRoute();
     };
 
     const goBack = () => {
         if (state.length === 1) return;
         state.pop();
+        window.history.back();
     };
 
     const currentRoute = () => {
-        return state.at(-1);
+        return state[state.length - 1];
+    };
+
+    window.onpopstate = () => {
+        state = [window.location.pathname.replace("/", "")];
+        renderRoute();
     };
 
     return {
@@ -34,12 +42,15 @@ const Router = () => {
     };
 };
 
+
 const router = Router();
 
-const renderRoute = async (route) => {
+const renderRoute = async () => {
     const appDiv = document.getElementById("app");
-    const currentRoute = route ?? router.currentRoute()
+    const currentRoute = router.currentRoute()
+    console.log('currentRoute',router.currentRoute())
     const Component = routes[currentRoute];
+    if(!Component) return appDiv.appendChild('404 not found')
     appDiv.innerHTML = "";
 
     if (typeof Component === "function") {

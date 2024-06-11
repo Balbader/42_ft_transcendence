@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "click",
         (event) => {
             const isAnchor = event.target.nodeName === "A";
-            console.log(event.target);
-            console.log("isAnchor: ", isAnchor);
 
             if (!isAnchor) return;
             console.log("isAnchor: ", isAnchor);

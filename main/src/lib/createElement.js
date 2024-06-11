@@ -1,5 +1,4 @@
 const createElement = (tagName, attributes, ...children) => {
-    console.log('hello')
     const element = document.createElement(tagName);
     
     Object.entries(attributes || {}).forEach(([key, value]) => {
@@ -25,7 +24,9 @@ const createElement = (tagName, attributes, ...children) => {
         return element;
     };
     element.on = (eventType, eventHandler) => {
-        element.addEventListener(eventType, eventHandler);
+        element.addEventListener(eventType, (e)=>{
+            eventHandler(e.target)
+        });
         return element;
     };
 
