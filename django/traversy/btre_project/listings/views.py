@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.core import EmptyPage, PageNotAnInteger, Paginator
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+
 from .models import Listing
 
 # Create your views here.
