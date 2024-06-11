@@ -19,6 +19,7 @@ def index(request):
 
 
 def listing(request, listing_id):
+    listings = Listing.objects.filter()
     return render(request, 'listings/listing.html')
 
 
