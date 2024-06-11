@@ -4,7 +4,7 @@ import pong from "../../../views/pong.js";
 import whoWeAre from "../../../views/whoWeAre.js";
 
 const routes = {
-    home:home,
+    home: home,
     about: about,
     whoWeAre: whoWeAre,
     pong: pong,
@@ -13,7 +13,7 @@ const routes = {
 
 const Router = () => {
     let state = [window.location.pathname.replace("/", "home")];
-    
+
     const goTo = (path) => {
         state.push(path);
         window.history.pushState({ path }, "", `/${path}`);
@@ -48,17 +48,10 @@ const router = Router();
 const renderRoute = async () => {
     const appDiv = document.getElementById("app");
     const currentRoute = router.currentRoute()
-    console.log('currentRoute',router.currentRoute())
     const Component = routes[currentRoute];
-    if(!Component) return appDiv.appendChild('404 not found')
+    if (!Component) return appDiv.appendChild('404 not found');
     appDiv.innerHTML = "";
-
-    if (typeof Component === "function") {
-            appDiv.appendChild(Component());
-    }
-     else {
-       throw('you must provide an element as a page')
-    }
-
+    appDiv.appendChild(Component());
 };
+
 export { renderRoute, router };
