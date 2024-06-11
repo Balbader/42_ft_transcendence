@@ -1,10 +1,14 @@
+import about from "../../views/about.js";
+import home from "../../views/home.js";
+import pong from "../../views/pong.js";
+import whoWeAre from "../../views/whoWeAre.js";
+
 const routes = {
-    "": "views/home.js",
-    home: "views/home.js",
-    about: "views/about.js",
-    whoWeAre: "views/whoWeAre.js",
-    pong: "views/pong.js",
-    login: "views/login.js",
+    home:home,
+    about: about,
+    whoWeAre: whoWeAre,
+    pong: pong,
+
 };
 
 const Router = () => {
@@ -32,15 +36,18 @@ const Router = () => {
 
 const router = Router();
 
-const renderRoute = async () => {
-    const scriptPath = routes[router.currentRoute()];
+const renderRoute = async (route) => {
     const appDiv = document.getElementById("app");
-    const view = await import(`http://localhost:3000/${scriptPath}`);
-    const finalView = view.default();
+    const currentRoute = route ?? router.currentRoute()
+    const Component = routes[currentRoute];
     appDiv.innerHTML = "";
-    typeof finalView === "string"
-        ? (appDiv.innerHTML = finalView)
-        : appDiv.appendChild(view.default());
-};
 
+    if (typeof Component === "function") {
+            appDiv.appendChild(Component());
+    }
+     else {
+       throw('you must provide an element as a page')
+    }
+
+};
 export { renderRoute, router };

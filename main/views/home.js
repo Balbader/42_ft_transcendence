@@ -1,7 +1,13 @@
+import { createElement } from "../lib/createElement.js";
+
 const home = () => {
-    const div = document.createElement('div');
-    div.textContent = 'hello from the home page.';
-    return div;
+    const Home = createElement('div')
+    .setStyle({background:'red',height:'200px',width:'300px'})
+    .on('click',()=>alert('hello'))
+    return Home;
 };
 
 export default home;
+
+
+
