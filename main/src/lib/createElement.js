@@ -1,6 +1,6 @@
 const createElement = (tagName, attributes, ...children) => {
     const element = document.createElement(tagName);
-    
+
     Object.entries(attributes || {}).forEach(([key, value]) => {
         element[key] = value;
     });
@@ -18,13 +18,14 @@ const createElement = (tagName, attributes, ...children) => {
         Object.assign(element.style, styles);
         return element;
     };
-    
+
     element.appendText = text => {
         element.appendChild(document.createTextNode(text));
         return element;
     };
+
     element.on = (eventType, eventHandler) => {
-        element.addEventListener(eventType, (e)=>{
+        element.addEventListener(eventType, (e) => {
             eventHandler(e.target)
         });
         return element;
@@ -33,4 +34,4 @@ const createElement = (tagName, attributes, ...children) => {
     return element;
 };
 
-export {createElement}
+export { createElement }
