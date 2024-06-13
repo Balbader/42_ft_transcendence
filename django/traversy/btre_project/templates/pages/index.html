@@ -2,7 +2,7 @@
 {% load static %}
 {% load humanize %}
 {% block content %}
-    <!-- Showcase -->
+    <!--NOTE: Showcase -->
     <!-- FIX: section showcase background not loading -->
     <section id="showcase">
         <div class="container text-center">
@@ -17,7 +17,7 @@
                     <div class="search">
                         <form action="{% url 'search' %}">
 
-                            <!-- Form Row 1 -->
+                            <!--NOTE: Form Row 1 -->
                             <div class="form-row">
 
                                 <div class="col-md-4 mb-3">
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
 
-                            <!-- Form Row 2 -->
+                            <!--NOTE: Form Row 2 -->
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label class="sr-only">Bedrooms</label>
@@ -72,7 +72,7 @@
         </div>
     </section>
 
-    <!-- Listings -->
+    <!--NOTE: Listings -->
     <section id="listings" class="py-5">
         <div class="container">
             <h3 class="text-center mb-3">Latest Listings</h3>
@@ -81,7 +81,7 @@
                 {% if listings %}
 
                     {% for listing in listings %}
-                        <!-- Listing 1 -->
+
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="card listing-preview">
                                 <img class="card-img-top" src="{{ listing.photo_main.url }}" %}" alt="">
@@ -130,6 +130,7 @@
                                 </div>
                             </div>
                         </div>
+
                 {% endfor %}
 
                 {% else %}
