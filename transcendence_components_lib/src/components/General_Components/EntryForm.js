@@ -1,8 +1,7 @@
 class EntryForm {
 
-    constructor(containerId) {
-        this.container = document.getElementById(containerId);
-        this.renderForm();
+    constructor(container) {
+        this.container = container;
     }
 
     renderForm() {

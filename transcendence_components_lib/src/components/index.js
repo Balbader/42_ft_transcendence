@@ -1,5 +1,4 @@
-import Button from './Button.js';
-import Card from './Card.js';
-import EntryForm from './EntryForm.js';
+import LoginForm from './Login_Form/LoginForm.js';
+import SignUpForm from './SignUp_Form/SignUpForm.js';
 
-export { Button, Card, EntryForm };
+export { LoginForm, SignUpForm };

@@ -1,12 +1,15 @@
-import { Button } from './components/index.js'
-import { Card } from './components/index.js'
-import { EntryForm } from './components/index.js'
+// import { LoginForm } from './components/Login_Form/LoginForm.js'
+import { SignUpForm } from './components/index.js'
+import { LoginForm } from './components/index.js'
+
 
 const app = document.getElementById('app');
-const button = new Button('Click Me', () => alert('Button clicked.'));
-const card = new Card('Card Title', 'This is the card content.');
-const form = new EntryForm('app');
 
-app.appendChild(button.render());
-app.appendChild(card.render());
-form.renderForm();
+/*             Login                  */
+const loginForm = new LoginForm(app);
+loginForm.renderForm();
+
+
+/*             SignUp                 */
+const signUpForm = new SignUpForm(app);
+// signUpForm.renderForm();
