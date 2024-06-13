@@ -9,3 +9,6 @@ const loginForm = new LoginForm('app');
 
 // app.appendChild(button.render());
 // app.appendChild(card.render());
+// loginForm.renderForm();
+// loginForm.getLoginForm();
+// loginForm.getSignupForm();

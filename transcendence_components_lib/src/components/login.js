@@ -8,8 +8,7 @@ class LoginForm {
     renderForm() {
         this.container.innerHTML = `
       <ul class="nav nav-tabs" id="formTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+        <li class="nav-item"> <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Signup</a>
@@ -85,10 +84,5 @@ class LoginForm {
         // Add signup logic here
     }
 }
-
-// Initialize the form component
-document.addEventListener('DOMContentLoaded', () => {
-    new LoginForm('app');
-});
 
 export default LoginForm;
