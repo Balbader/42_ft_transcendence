@@ -10,6 +10,9 @@ class Button {
         button.innerText = this.text;
         button.addEventListener('click', this.onClick);
 
+        button.classList.add('btn')
+        button.classList.add('btn-primary')
+
         return button;
     }
 }
