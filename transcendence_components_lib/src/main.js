@@ -1,4 +1,4 @@
-import { Button, Card } from './index.js'
+import { Button, Card } from './components/index.js'
 
 const app = document.getElementById('app');
 const button = new Button('Click Me', () => alert('Button clicked.'));
