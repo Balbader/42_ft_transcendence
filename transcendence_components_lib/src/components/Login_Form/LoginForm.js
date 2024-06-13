@@ -31,8 +31,11 @@ class LoginForm {
                                         <!--NOTE: Reset Password link -->
                                         <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
-                                        <!--NOTE: Submit Btn -->
-                                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                                        <!--NOTE: Login Btn -->
+                                        <button id="btnLogin" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+
+                                        <!--NOTE: Login with 42 Btn -->
+                                        <button id="btnFortyTwo" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Login with 42</button>
                                     </div>
                                     <div>
                                         <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold"> Sign Up</a>
