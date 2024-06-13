@@ -7,9 +7,9 @@ const app = document.getElementById('app');
 
 /*             Login                  */
 const loginForm = new LoginForm(app);
-loginForm.renderForm();
+// loginForm.renderForm();
 
 
 /*             SignUp                 */
 const signUpForm = new SignUpForm(app);
-// signUpForm.renderForm();
+signUpForm.renderForm();
