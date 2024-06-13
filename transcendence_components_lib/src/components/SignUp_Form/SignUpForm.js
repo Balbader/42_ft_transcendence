@@ -15,18 +15,26 @@ class SignUpForm {
                                     <div class="mb-md-5 mt-md-4 pb-5">
                                         <h2 class="fw-bold mb-2 text-uppercase">SignUp</h2>
                                         <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+                                        <!--NOTE: Name Field -->
                                         <div data-mdb-input-init class="form-outline form-white mb-4">
                                             <input type="email" id="signupName" class="form-control form-control-lg" />
                                             <label class="form-label" for="">Name</label>
                                         </div>
+
+                                        <!--NOTE: Email Field -->
                                         <div data-mdb-input-init class="form-outline form-white mb-4">
                                             <input type="email" id="signupEmail" class="form-control form-control-lg" />
                                             <label class="form-label" for="">Email</label>
                                         </div>
+
+                                        <!--NOTE: Password Field -->
                                         <div data-mdb-input-init class="form-outline form-white mb-4">
                                             <input id="signupPassword" type="password" id="typePasswordX" class="form-control form-control-lg" />
                                             <label class="form-label" for="">Password</label>
                                         </div>
+
+                                        <!-- Submit Btn -->
                                         <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">SignUp</button>
                                     </div>
                                 </div>
