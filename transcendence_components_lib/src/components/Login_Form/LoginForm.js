@@ -19,13 +19,13 @@ class LoginForm {
                                         <!--NOTE: Email Field -->
                                         <div data-mdb-input-init class="form-outline form-white mb-4">
                                             <input type="email" id="loginEmail" class="form-control form-control-lg" />
-                                            <label class="form-label" for="typeEmailX">Email</label>
+                                            <label class="form-label" for="">Email</label>
                                         </div>
 
                                         <!--NOTE: Password Field -->
                                         <div data-mdb-input-init class="form-outline form-white mb-4">
                                             <input id="loginPassword" type="password" id="typePasswordX" class="form-control form-control-lg" />
-                                            <label class="form-label" for="typePasswordX">Password</label>
+                                            <label class="form-label" for="">Password</label>
                                         </div>
 
                                         <!--NOTE: Reset Password link -->
