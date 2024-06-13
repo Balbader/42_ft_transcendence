@@ -15,15 +15,23 @@ class LoginForm {
                                     <div class="mb-md-5 mt-md-4 pb-5">
                                         <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                                         <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+                                        <!--NOTE: Email Field -->
                                         <div data-mdb-input-init class="form-outline form-white mb-4">
                                             <input type="email" id="loginEmail" class="form-control form-control-lg" />
                                             <label class="form-label" for="typeEmailX">Email</label>
                                         </div>
+
+                                        <!--NOTE: Password Field -->
                                         <div data-mdb-input-init class="form-outline form-white mb-4">
                                             <input id="loginPassword" type="password" id="typePasswordX" class="form-control form-control-lg" />
                                             <label class="form-label" for="typePasswordX">Password</label>
                                         </div>
+
+                                        <!--NOTE: Reset Password link -->
                                         <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+
+                                        <!--NOTE: Submit Btn -->
                                         <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
                                     </div>
                                     <div>

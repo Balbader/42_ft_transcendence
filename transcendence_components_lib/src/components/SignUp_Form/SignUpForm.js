@@ -34,7 +34,7 @@ class SignUpForm {
                                             <label class="form-label" for="">Password</label>
                                         </div>
 
-                                        <!-- Submit Btn -->
+                                        <!--NOTE: Submit Btn -->
                                         <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">SignUp</button>
                                     </div>
                                 </div>
