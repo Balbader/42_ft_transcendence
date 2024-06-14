@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load humanize %}
 {% block content %}
     <section id="register" class="bg-light py-5">
         <div class="container">
@@ -16,7 +15,12 @@
                         </div>
 
                         <div class="card-body">
+
+                        <!-- NOTE: Alerts -->
+                            {% include 'partials/_alerts.html' %}
+
                             <form action="{% url 'register' %}" method="POST">
+                                <!-- NOTE: Token -->
                                 {% csrf_token %}
 
                                 <!-- NOTE: First Name input -->
