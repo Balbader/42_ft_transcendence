@@ -1,8 +1,6 @@
 "use strict";
 
 var _index = require("./components/index.js");
-// import { LoginForm } from './components/Login_Form/LoginForm.js'
-
 var app = document.getElementById('app');
 
 /*             Login                  */
