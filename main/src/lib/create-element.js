@@ -5,14 +5,7 @@ const createElement = (tagName, attributes, ...children) => {
 		element.setAttribute(key, value);
 	}
 
-	for (const child of children) {
-		console.log('child');
-		if (typeof child === 'string') {
-			element.append(document.createTextNode(child));
-		} else {
-			element.append(child);
-		}
-	}
+	element.append(children);
 
 	element.setStyle = styles => {
 		Object.assign(element.style, styles);
@@ -20,14 +13,12 @@ const createElement = (tagName, attributes, ...children) => {
 	};
 
 	element.appendText = text => {
-		element.append(document.createTextNode(text));
+		element.append(text);
 		return element;
 	};
 
-	element.on = (eventType, eventHandler) => {
-		element.addEventListener(eventType, event => {
-			eventHandler(event.target);
-		});
+	element.on = (eventType, eventHandler, options) => {
+		element.addEventListener(eventType, eventHandler, options);
 		return element;
 	};
 
