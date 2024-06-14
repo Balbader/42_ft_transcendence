@@ -1,2 +1,2 @@
-export * from './createElement.js';
-export * from './Router';
+export * from './create-element.js';
+export * from './Router.js';

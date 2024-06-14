@@ -25,8 +25,8 @@ const createElement = (tagName, attributes, ...children) => {
 	};
 
 	element.on = (eventType, eventHandler) => {
-		element.addEventListener(eventType, e => {
-			eventHandler(e.target);
+		element.addEventListener(eventType, event => {
+			eventHandler(event.target);
 		});
 		return element;
 	};

@@ -1,16 +1,14 @@
 import about from '../../../views/about.js';
 import home from '../../../views/home.js';
-import pong from '../../../views/pong.js';
 import whoWeAre from '../../../views/whoWeAre.js';
 
 const routes = {
 	home,
 	about,
 	whoWeAre,
-	pong,
 };
 
-const Router = () => {
+const router = () => {
 	let state = [window.location.pathname.replace('/', 'home')];
 
 	const goTo = path => {
@@ -42,7 +40,7 @@ const Router = () => {
 	};
 };
 
-const router = Router();
+const route = router();
 
 const renderRoute = () => {
 	const appDiv = document.querySelector('#app');
@@ -56,4 +54,4 @@ const renderRoute = () => {
 	appDiv.replaceChildren(Component);
 };
 
-export {renderRoute, router};
+export {renderRoute, route};
