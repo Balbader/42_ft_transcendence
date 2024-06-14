@@ -1,11 +1,10 @@
 class SignUpForm {
+	constructor(container) {
+		this.container = container;
+	}
 
-    constructor(container) {
-        this.container = container;
-    }
-
-    renderForm() {
-        this.container.innerHTML = `
+	renderForm() {
+		this.container.innerHTML = `
             <section id="signupForm" class="vh-100 gradient-custom">
                 <div class="container py-5 h-100">
                     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -47,22 +46,21 @@ class SignUpForm {
                 </div>
             </section>
         `;
-        this.addEventListeners();
-    }
+		this.addEventListeners();
+	}
 
+	addEventListeners() {
+		document.querySelector('#signupForm').addEventListener('submit', this.handleSignup);
+	}
 
-    addEventListeners() {
-        document.getElementById('signupForm').addEventListener('submit', this.handleSignup);
-    }
-
-    handleSignup(event) {
-        event.preventDefault();
-        const name = document.getElementById('signupName').value;
-        const email = document.getElementById('signupEmail').value;
-        const password = document.getElementById('signupPassword').value;
-        console.log(`Signup attempted with name: ${name}, email: ${email} and password: ${password}`);
-        // Add signup logic here
-    }
+	handleSignup(event) {
+		event.preventDefault();
+		const name = document.querySelector('#signupName').value;
+		const email = document.querySelector('#signupEmail').value;
+		const password = document.querySelector('#signupPassword').value;
+		console.log(`Signup attempted with name: ${name}, email: ${email} and password: ${password}`);
+		// Add signup logic here
+	}
 }
 
 export default SignUpForm;

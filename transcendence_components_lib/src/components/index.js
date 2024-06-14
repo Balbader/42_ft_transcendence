@@ -1,4 +1,3 @@
-import LoginForm from './Login_Form/LoginForm.js';
-import SignUpForm from './SignUp_Form/SignUpForm.js';
 
-export { LoginForm, SignUpForm };
+export {default as LoginForm} from './Login_Form/LoginForm.js';
+export {default as SignUpForm} from './SignUp_Form/SignUpForm.js';

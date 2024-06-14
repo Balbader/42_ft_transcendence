@@ -1,11 +1,10 @@
 class EntryForm {
+	constructor(container) {
+		this.container = container;
+	}
 
-    constructor(container) {
-        this.container = container;
-    }
-
-    renderForm() {
-        this.container.innerHTML = `
+	renderForm() {
+		this.container.innerHTML = `
       <ul class="nav nav-tabs" id="formTab" role="tablist">
         <li class="nav-item"> <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
         </li>
@@ -22,11 +21,11 @@ class EntryForm {
         </div>
       </div>
     `;
-        this.addEventListeners();
-    }
+		this.addEventListeners();
+	}
 
-    getLoginForm() {
-        return `
+	getLoginForm() {
+		return `
       <form id="loginForm" class="mt-3">
         <div class="form-group">
           <label for="loginEmail">Email address</label>
@@ -39,10 +38,10 @@ class EntryForm {
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
     `;
-    }
+	}
 
-    getSignupForm() {
-        return `
+	getSignupForm() {
+		return `
       <form id="signupForm" class="mt-3">
         <div class="form-group">
           <label for="signupName">Full Name</label>
@@ -59,29 +58,29 @@ class EntryForm {
         <button type="submit" class="btn btn-primary">Signup</button>
       </form>
     `;
-    }
+	}
 
-    addEventListeners() {
-        document.getElementById('loginForm').addEventListener('submit', this.handleLogin);
-        document.getElementById('signupForm').addEventListener('submit', this.handleSignup);
-    }
+	addEventListeners() {
+		document.querySelector('#loginForm').addEventListener('submit', this.handleLogin);
+		document.querySelector('#signupForm').addEventListener('submit', this.handleSignup);
+	}
 
-    handleLogin(event) {
-        event.preventDefault();
-        const email = document.getElementById('loginEmail').value;
-        const password = document.getElementById('loginPassword').value;
-        console.log(`Login attempted with email: ${email} and password: ${password}`);
-        // Add login logic here
-    }
+	handleLogin(event) {
+		event.preventDefault();
+		const email = document.querySelector('#loginEmail').value;
+		const password = document.querySelector('#loginPassword').value;
+		console.log(`Login attempted with email: ${email} and password: ${password}`);
+		// Add login logic here
+	}
 
-    handleSignup(event) {
-        event.preventDefault();
-        const name = document.getElementById('signupName').value;
-        const email = document.getElementById('signupEmail').value;
-        const password = document.getElementById('signupPassword').value;
-        console.log(`Signup attempted with name: ${name}, email: ${email} and password: ${password}`);
-        // Add signup logic here
-    }
+	handleSignup(event) {
+		event.preventDefault();
+		const name = document.querySelector('#signupName').value;
+		const email = document.querySelector('#signupEmail').value;
+		const password = document.querySelector('#signupPassword').value;
+		console.log(`Signup attempted with name: ${name}, email: ${email} and password: ${password}`);
+		// Add signup logic here
+	}
 }
 
 export default EntryForm;
