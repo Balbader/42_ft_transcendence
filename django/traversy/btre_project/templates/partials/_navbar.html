@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
 
-                <!--NOTE: Home button -->
+                <!--NOTE: Home nav link -->
                 <li
                     {% if '/' == request.path %}
                         class="nav-item active mr-3"
@@ -22,7 +22,7 @@
                     <a class="nav-link" href="{% url 'index' %}">Home</a>
                 </li>
 
-                <!--NOTE: About button -->
+                <!--NOTE: About nav link -->
                 <li
                     {% if 'about' in request.path %}
                         class="nav-item active mr-3"
@@ -33,7 +33,7 @@
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
 
-                <!--NOTE: Listings button -->
+                <!--NOTE: Listings nam link -->
                 <li
                     {% if 'listings' in request.path %}
                         class="nav-item active mr-3"
@@ -61,6 +61,7 @@
                         Login
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>
