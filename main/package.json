@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "ava",
-    "serve": " npx serve src"
+    "serve": "npx serve src"
   },
   "author": "",
   "license": "ISC",

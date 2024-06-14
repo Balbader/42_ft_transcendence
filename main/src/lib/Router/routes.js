@@ -1,11 +1,13 @@
 import about from '../../../views/about.js';
 import home from '../../../views/home.js';
 import whoWeAre from '../../../views/whoWeAre.js';
+import login from '../../../views/login.js';
 
 const routes = {
 	home,
 	about,
 	whoWeAre,
+	login,
 };
 
 const router = () => {
@@ -45,13 +47,13 @@ const route = router();
 const renderRoute = () => {
 	const appDiv = document.querySelector('#app');
 	const currentRoute = router.currentRoute();
-	const Component = routes[currentRoute]?.();
+	const component = routes[currentRoute]?.();
 
-	if (!Component) {
+	if (!component) {
 		return appDiv.replaceChildren('404 not found');
 	}
 
-	appDiv.replaceChildren(Component);
+	appDiv.replaceChildren(component);
 };
 
 export {renderRoute, route};
