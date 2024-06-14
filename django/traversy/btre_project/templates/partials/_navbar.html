@@ -49,13 +49,25 @@
             <ul class="navbar-nav ml-auto">
 
                 <!--NOTE: Register button -->
-                <li class="nav-item mr-3">
+                <li
+                    {% if 'register' in request.path %}
+                        class="nav-item active mr-3"
+                    {% else %}
+                        class="nav-item mr-3"
+                    {% endif %}
+                >
                     <a class="nav-link" href="{% url 'register' %}">
                         <i class="fas fa-user-plus"></i> Register</a>
                 </li>
 
                 <!--NOTE: Login button -->
-                <li class="nav-item mr-3">
+                <li
+                    {% if 'login' in request.path %}
+                        class="nav-item active mr-3"
+                    {% else %}
+                        class="nav-item mr-3"
+                    {% endif %}
+                >
                     <a class="nav-link" href="{% url 'login' %}">
                         <i class="fas fa-sign-in-alt"></i>
                         Login
