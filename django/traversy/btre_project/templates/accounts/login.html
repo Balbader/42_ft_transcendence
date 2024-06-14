@@ -17,6 +17,7 @@
 
                         <div class="card-body">
                             <form action="{% url 'login' %}" method="POST">
+                                {% csrf_token %}
 
                                 <!-- NOTE: Username input -->
                                 <div class="form-group">

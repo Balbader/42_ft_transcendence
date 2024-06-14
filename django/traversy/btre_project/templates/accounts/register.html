@@ -17,6 +17,7 @@
 
                         <div class="card-body">
                             <form action="{% url 'register' %}" method="POST">
+                                {% csrf_token %}
 
                                 <!-- NOTE: First Name input -->
                                 <div class="form-group">
