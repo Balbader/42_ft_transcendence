@@ -55,7 +55,9 @@ const input = ({
 		required,
 	});
 
-export { loginForm, input, label, button };
+export {
+	loginForm, input, label, button,
+};
 
 // Class LoginForm {
 //   constructor(container) {
