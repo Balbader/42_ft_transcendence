@@ -1,11 +1,10 @@
 class LoginForm {
+  constructor(container) {
+    this.container = container;
+  }
 
-    constructor(container) {
-        this.container = container;
-    }
-
-    renderForm() {
-        this.container.innerHTML = `
+  renderForm() {
+    this.container.innerHTML = `
             <section id="loginForm" class="vh-100 gradient-custom">
                 <div class="container py-5 h-100">
                     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -48,20 +47,24 @@ class LoginForm {
                 </div>
             </section>
         `;
-        this.addEventListeners();
-    }
+    this.addEventListeners();
+  }
 
-    addEventListeners() {
-        document.getElementById('loginForm').addEventListener('submit', this.handleLogin);
-    }
+  addEventListeners() {
+    document
+      .getElementById("loginForm")
+      .addEventListener("submit", this.handleLogin);
+  }
 
-    handleLogin(event) {
-        event.preventDefault();
-        const email = document.getElementById('loginEmail').value;
-        const password = document.getElementById('loginPassword').value;
-        console.log(`Login attempted with email: ${email} and password: ${password}`);
-        // Add login logic here
-    }
+  handleLogin(event) {
+    event.preventDefault();
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+    console.log(
+      `Login attempted with email: ${email} and password: ${password}`
+    );
+    // Add login logic here
+  }
 }
 
 export default LoginForm;
