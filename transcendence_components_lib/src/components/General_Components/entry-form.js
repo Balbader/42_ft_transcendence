@@ -59,28 +59,6 @@ class EntryForm {
       </form>
     `;
 	}
-
-	addEventListeners() {
-		document.querySelector('#loginForm').addEventListener('submit', this.handleLogin);
-		document.querySelector('#signupForm').addEventListener('submit', this.handleSignup);
-	}
-
-	handleLogin(event) {
-		event.preventDefault();
-		const email = document.querySelector('#loginEmail').value;
-		const password = document.querySelector('#loginPassword').value;
-		console.log(`Login attempted with email: ${email} and password: ${password}`);
-		// Add login logic here
-	}
-
-	handleSignup(event) {
-		event.preventDefault();
-		const name = document.querySelector('#signupName').value;
-		const email = document.querySelector('#signupEmail').value;
-		const password = document.querySelector('#signupPassword').value;
-		console.log(`Signup attempted with name: ${name}, email: ${email} and password: ${password}`);
-		// Add signup logic here
-	}
 }
 
 export default EntryForm;
