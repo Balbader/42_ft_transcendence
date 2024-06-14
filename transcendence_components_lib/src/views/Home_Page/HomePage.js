@@ -4,7 +4,7 @@ class HomePage {
         this.container = container;
     }
 
-    renderForm() {
+    renderHome() {
         this.container.innerHTML = `
             <section id="loginForm" class="vh-100 gradient-custom">
                 <div class="container py-5 h-100">
