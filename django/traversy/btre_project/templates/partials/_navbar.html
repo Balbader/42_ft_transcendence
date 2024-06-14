@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
 
-                <!-- Home button -->
+                <!--NOTE: Home button -->
                 <li
                     {% if '/' == request.path %}
                         class="nav-item active mr-3"
@@ -22,7 +22,7 @@
                     <a class="nav-link" href="{% url 'index' %}">Home</a>
                 </li>
 
-                <!-- About button -->
+                <!--NOTE: About button -->
                 <li
                     {% if 'about' in request.path %}
                         class="nav-item active mr-3"
@@ -33,7 +33,7 @@
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
 
-                <!-- Listings button -->
+                <!--NOTE: Listings button -->
                 <li
                     {% if 'listings' in request.path %}
                         class="nav-item active mr-3"
@@ -47,12 +47,16 @@
             </ul>
 
             <ul class="navbar-nav ml-auto">
+
+                <!--NOTE: Register button -->
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="register.html">
+                    <a class="nav-link" href="{% url 'register' %}">
                         <i class="fas fa-user-plus"></i> Register</a>
                 </li>
+
+                <!--NOTE: Login button -->
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="login.html">
+                    <a class="nav-link" href="{% url 'login' %}">
                         <i class="fas fa-sign-in-alt"></i>
                         Login
                     </a>
