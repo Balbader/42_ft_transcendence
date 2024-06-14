@@ -24,7 +24,7 @@ def register(request):
                     return redirect('register')
                 else:
                     user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password)
-                    # NOTE: option 1
+                    # Option 1
                     # auth.login(request, user)
                     # messages.success(request, 'User Successfuly Created! Login Successful.')
                     # return redirect('index')
