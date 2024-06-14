@@ -5,7 +5,7 @@ const createElement = (tagName, attributes, ...children) => {
 		element.setAttribute(key, value);
 	}
 
-	element.append(children);
+	element.append(...children);
 
 	element.setStyle = styles => {
 		Object.assign(element.style, styles);
