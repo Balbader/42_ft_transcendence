@@ -1,4 +1,5 @@
 import { createElement } from '../../lib/create-element.js';
+
 const button = ({ variant = 'primary', text }) => {
     createElement(
         'button',
@@ -9,15 +10,16 @@ const button = ({ variant = 'primary', text }) => {
 const label = ({ className, text }) => {
     createElement(
         'label',
-        { class: `form-label ${className}`, }
+        { class: `form-label ${className}` },
     ).appendText(text);
-
 };
 
 const input = ({ value, type, className, placeholder, label, required = true }) => {
     createElement(
         'input',
-        { value, type, class: `form-control form-control-l ${className}`, placeholder, label, required, }
+        {
+            value, type, class: `form-control form-control-l ${className}`, placeholder, label, required,
+        },
     );
 };
 
@@ -26,7 +28,9 @@ const email = () => {
         'div',
         { class: 'form-group' },
         label({ text: 'your email' }),
-        input({ placeholder: 'enter your email', label: 'email', value: '', type: 'email', }),
+        input({
+            placeholder: 'enter your email', label: 'email', value: '', type: 'email',
+        }),
     );
 };
 
@@ -35,7 +39,9 @@ const password = () => {
         'div',
         { class: 'form-group' },
         label({ text: 'your password' }),
-        input({ placeholder: 'enter your password', label: 'password', value: '', type: 'password', }),
+        input({
+            placeholder: 'enter your password', label: 'password', value: '', type: 'password',
+        }),
     );
 };
 

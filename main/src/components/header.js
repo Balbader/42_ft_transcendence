@@ -9,5 +9,3 @@ const header = () => {
 };
 
 export { header };
-
-const hello = () => hello;
