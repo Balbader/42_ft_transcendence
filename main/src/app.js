@@ -1,20 +1,20 @@
 import { renderRoute, router } from './lib/Router/routes.js';
-import { header } from './components/header.js';
+// import { header } from './components/header.js';
 
 // To review our createElement fnc , try to build the header component with it
 // try to handle navigation without the use of document listener and use the router instead
 // is to allow component to be async, an example of that would be a page that loads data from the server
 // our component they need to manage state
 
-const layout = () => {
-    header();
-    renderRoute(window.location.pathname);
-};
+// const layout = () => {
+//     header();
+//     renderRoute(window.location.pathname);
+// };
 
 document.addEventListener('DOMContentLoaded', () => {
     // Load initial route
     //   layout
-    layout();
+    // layout();
 
     // Handle navigation
     document.addEventListener(
