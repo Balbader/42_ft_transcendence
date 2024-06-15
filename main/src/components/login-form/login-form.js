@@ -1,71 +1,58 @@
 import { createElement } from '../../lib/create-element.js';
 
-const email = () => createElement(
-    'div',
-    { class: 'form-group' },
-    label({ text: 'your email' }),
-    input({
-        placeholder: 'enter your email',
-        label: 'email',
-        value: '',
-        type: 'email',
-    }),
-);
+const email = () => {
+    createElement(
+        'div',
+        { class: 'form-group' },
+        label({ text: 'your email' }),
+        input({ placeholder: 'enter your email', label: 'email', value: '', type: 'email', }),
+    );
+};
 
-const password = () => createElement(
-    'div',
-    { class: 'form-group' },
-    label({ text: 'your password' }),
-    input({
-        placeholder: 'enter your password',
-        label: 'password',
-        value: '',
-        type: 'password',
-    }),
-);
+const password = () => {
+    createElement(
+        'div',
+        { class: 'form-group' },
+        label({ text: 'your password' }),
+        input({ placeholder: 'enter your password', label: 'password', value: '', type: 'password', }),
+    );
+};
 
-const loginForm = () => createElement(
-    'div',
-    { class: 'form-group' },
-    email(),
-    password(),
-);
+const loginForm = () => {
+    createElement(
+        'div',
+        { class: 'form-group' },
+        email(),
+        password(),
+    );
+};
 
-const button = ({ variant = 'primary', text }) => createElement('button', { class: `btn btn-${variant}` }).appendText(text);
+const button = ({ variant = 'primary', text }) => {
+    createElement(
+        'button',
+        { class: `btn btn-${variant}` },
+    ).appendText(text);
+};
 
-const label = ({ className, text }) =>
-    createElement('label', {
-        class: `form-label ${className}`,
-    }).appendText(text);
+const label = ({ className, text }) => {
+    createElement(
+        'label',
+        { class: `form-label ${className}`, }
+    ).appendText(text);
 
-const input = ({
-    value,
-    type,
-    className,
-    placeholder,
-    label,
-    required = true,
-}) =>
-    createElement('input', {
-        value,
-        type,
-        class: `form-control form-control-l ${className}`,
-        placeholder,
-        label,
-        required,
-    });
+};
+
+const input = ({ value, type, className, placeholder, label, required = true }) => {
+    createElement(
+        'input',
+        { value, type, class: `form-control form-control-l ${className}`, placeholder, label, required, }
+    );
+};
 
 export {
     loginForm, input, label, button,
 };
 
-// Class LoginForm {
-//   constructor(container) {
-//     this.container = container;
-//   }
-
-//   renderForm() {
-//     this.container.innerHTML = `
 //             <section id="loginForm" class="vh-100 gradient-custom">
 //                 <div class="container py-5 h-100">
 //                     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -107,23 +94,4 @@ export {
 //                     </div>
 //                 </div>
 //             </section>
-//         `;
-//     this.addEventListeners();
-//   }
 
-//   addEventListeners() {
-//     document
-//       .getElementById("loginForm")
-//       .addEventListener("submit", this.handleLogin);
-//   }
-
-//   handleLogin(event) {
-//     event.preventDefault();
-//     const email = document.getElementById("loginEmail").value;
-//     const password = document.getElementById("loginPassword").value;
-//     console.log(
-//       `Login attempted with email: ${email} and password: ${password}`
-//     );
-//     // Add login logic here
-//   }
-// }
