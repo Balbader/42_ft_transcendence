@@ -1,10 +1,10 @@
 class EntryForm {
-    constructor(container) {
-        this.container = container;
-    }
+  constructor(container) {
+    this.container = container;
+  }
 
-    renderForm() {
-        this.container.innerHTML = `
+  renderForm() {
+    this.container.innerHTML = `
       <ul class="nav nav-tabs" id="formTab" role="tablist">
         <li class="nav-item"> <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
         </li>
@@ -21,11 +21,11 @@ class EntryForm {
         </div>
       </div>
     `;
-        this.addEventListeners();
-    }
+    this.addEventListeners();
+  }
 
-    getLoginForm() {
-        return `
+  getLoginForm() {
+    return `
       <form id="loginForm" class="mt-3">
         <div class="form-group">
           <label for="loginEmail">Email address</label>
@@ -38,10 +38,10 @@ class EntryForm {
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
     `;
-    }
+  }
 
-    getSignupForm() {
-        return `
+  getSignupForm() {
+    return `
       <form id="signupForm" class="mt-3">
         <div class="form-group">
           <label for="signupName">Full Name</label>
@@ -58,7 +58,7 @@ class EntryForm {
         <button type="submit" class="btn btn-primary">Signup</button>
       </form>
     `;
-    }
+  }
 }
 
 export default EntryForm;
