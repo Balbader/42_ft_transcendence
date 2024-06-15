@@ -1,4 +1,9 @@
 {
-    "prettier.useTabs": true,
-    "editor.guides.highlightActiveIndentation": "always",
+  "prettier.useTabs": true,
+  "editor.guides.highlightActiveIndentation": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "vim.enableNeovim": true
 }
