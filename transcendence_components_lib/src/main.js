@@ -1,4 +1,4 @@
-import {SignUpForm, LoginForm} from './components/index.js';
+import { SignUpForm, LoginForm } from './components/index.js';
 
 const app = document.querySelector('#app');
 
