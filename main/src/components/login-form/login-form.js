@@ -1,4 +1,25 @@
 import { createElement } from '../../lib/create-element.js';
+const button = ({ variant = 'primary', text }) => {
+    createElement(
+        'button',
+        { class: `btn btn-${variant}` },
+    ).appendText(text);
+};
+
+const label = ({ className, text }) => {
+    createElement(
+        'label',
+        { class: `form-label ${className}`, }
+    ).appendText(text);
+
+};
+
+const input = ({ value, type, className, placeholder, label, required = true }) => {
+    createElement(
+        'input',
+        { value, type, class: `form-control form-control-l ${className}`, placeholder, label, required, }
+    );
+};
 
 const email = () => {
     createElement(
@@ -27,30 +48,11 @@ const loginForm = () => {
     );
 };
 
-const button = ({ variant = 'primary', text }) => {
-    createElement(
-        'button',
-        { class: `btn btn-${variant}` },
-    ).appendText(text);
-};
-
-const label = ({ className, text }) => {
-    createElement(
-        'label',
-        { class: `form-label ${className}`, }
-    ).appendText(text);
-
-};
-
-const input = ({ value, type, className, placeholder, label, required = true }) => {
-    createElement(
-        'input',
-        { value, type, class: `form-control form-control-l ${className}`, placeholder, label, required, }
-    );
-};
-
 export {
-    loginForm, input, label, button,
+    loginForm,
+    input,
+    label,
+    button,
 };
 
 //             <section id="loginForm" class="vh-100 gradient-custom">

@@ -16,7 +16,6 @@ const createRouter = () => {
     const goTo = path => {
         state.push(path);
         window.history.pushState({ path }, '', `/${path}`);
-        // RenderRoute();
     };
 
     const goBack = () => {
@@ -32,7 +31,6 @@ const createRouter = () => {
 
     window.addEventListener('popstate', () => {
         state = [window.location.pathname.replace('/', '')];
-        // RenderRoute();
     });
 
     return {
