@@ -14,8 +14,6 @@ def contact(request):
         user_id = request.POST['user_id']
         realtor_email = request.POST['realtor_email']
 
-        contact = Contact(listing=listing_id, listing_id=listing_id, name=name, email=email, phone=phone, message=message, user_id=user_id)
-
         contact.save()
 
         messages.success(request, 'Your request has been submitted, a realtor will get back to you soon.')
