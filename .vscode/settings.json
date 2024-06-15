@@ -1,0 +1,4 @@
+{
+    "prettier.useTabs": true,
+    "editor.guides.highlightActiveIndentation": "always",
+}
