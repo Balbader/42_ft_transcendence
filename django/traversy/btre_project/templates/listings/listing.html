@@ -175,22 +175,45 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form action="{% url 'contact' method="POST" %}">
+
+                  <!-- NOTE: make sure to add POST method as we are sending the input to the database -->
+                  <form action="{% url 'contact' %}" method="POST">
+
+                    <!-- NOTE: Make sure that we secure the post in server with token -->
                     {% csrf_token %}
+
+                    <!-- NOTE: Send the user id as a hidden input -->
+                    {% if user.is_authenticated %}
+                      <input type="hidden" name="user_id" value="{{ user.id }}">
+                    {% else %}
+                      <input type="hidden" name="user_id" value="0">
+                    {% endif %}
+
+                    <!-- NOTE: Send realtor_email and listing_id in order to notify the realtor -->
+                    <input type="hidden" name="realtor_email" value="{{ listing.realtor }}">
+                    <input type="hidden" name="listing_id" value="{{ listing.id }}">
 
                     <div class="form-group">
                       <label for="property_name" class="col-form-label">Property:</label>
-                      <input type="text" name="listing" class="form-control" value="45 Drivewood Cirlce" disabled>
+                      <input type="text" name="listing" class="form-control" value="{{ listing.title}}" disabled>
                     </div>
 
                     <div class="form-group">
                       <label for="name" class="col-form-label">Name:</label>
-                      <input type="text" name="name" class="form-control" required>
+                      <input type="text" name="name" class="form-control"
+                        {% if user.is_authenticated %}
+                          value="{{ user.first_name }} {{ user.last_name}}"
+                        {% endif %}
+                      required>
                     </div>
 
                     <div class="form-group">
                       <label for="email" class="col-form-label">Email:</label>
-                      <input type="email" name="email" class="form-control" required>
+                      <input type="email" name="email" class="form-control"
+                        {% if user.is_authenticated %}
+                          value="{{ user.email }}"
+                        {% endif %}
+                      required>
                     </div>
 
                     <div class="form-group">
