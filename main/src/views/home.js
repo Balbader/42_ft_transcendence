@@ -8,9 +8,9 @@ const home = () => {
             try {
                 const todos = await rest.get('todos').json();
 
-                for (const todo of todos) {
+                todos.map((todo) => {
                     console.log(`${todo.id} : ${todo.title} - ${todo.completed}`);
-                }
+                })
 
                 button.textContent = todos[0].id + ' is completed? ' + todos[0].completed;
             } catch (error) {
