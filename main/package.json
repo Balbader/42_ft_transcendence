@@ -5,11 +5,12 @@
   "main": "index.js",
   "type": "module",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "views": "views"
   },
   "scripts": {
     "test": "ava",
-    "serve": "serve src --single",
+    "serve": "serve src --single"
   },
   "author": "",
   "license": "ISC",
