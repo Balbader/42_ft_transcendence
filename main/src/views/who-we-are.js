@@ -1,6 +1,7 @@
 const whoWeAre = () => {
     const div = document.createElement('div');
-    div.textContent = 'hello from the whoWeAre page.';
+    const hello = <p>hello from the whoWeAre page.</p>;
+    div.appendChild(hello);
     return div;
 };
 
