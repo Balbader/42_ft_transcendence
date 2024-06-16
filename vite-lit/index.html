@@ -1,17 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Lit</title>
     <link rel="stylesheet" href="./src/index.css" />
     <script type="module" src="/src/my-panel.js"></script>
-</head>
 
-<body>
-    <my-panel></my-panel>
-</body>
+    <!-- ! If I want to change the styles properties of the component from outside the js file -->
+    <style>
+      my-panel {
+        --my-panel-primary-bg: white;
+        --my-panel-primary-color: black;
+      }
+    </style>
+  </head>
 
+  <body>
+    <my-panel title="Home"></my-panel>
+    <my-panel title="Sweet"></my-panel>
+    <my-panel title="Home"></my-panel>
+  </body>
 </html>
