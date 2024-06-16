@@ -30,6 +30,7 @@
     "@web/rollup-plugin-import-meta-assets": "^2.2.1",
     "@web/test-runner": "^0.18.2",
     "babel-plugin-template-html-minifier": "^4.1.0",
+    "bootstrap": "^5.3.3",
     "deepmerge": "^4.3.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",

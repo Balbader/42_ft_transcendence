@@ -70,6 +70,8 @@ class FtTranscendence extends LitElement {
         >
           Code examples
         </a>
+        <br />
+        <button class="btn btn-primary">Hello bootstrap</button>
       </main>
 
       <p class="app-footer">
