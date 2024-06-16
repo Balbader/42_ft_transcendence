@@ -1,5 +1,7 @@
+import { createElement } from "../lib/create-element.js"
+
 const whoWeAre = () => {
-    const div = document.createElement('div');
+    const div = createElement('div');
     const hello = <p>hello from the whoWeAre page.</p>;
     div.appendChild(hello);
     return div;
