@@ -1,0 +1,10 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    ["babel-plugin-jsx-pragmatic", {
+      "module": "dom",
+      "import": "dom",
+      "export": "dom"
+    }]
+  ]
+}

@@ -18,8 +18,11 @@
   "devDependencies": {
     "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
+    "@babel/plugin-transform-react-jsx": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
-    "@web/dev-server": "^0.4.5"
+    "@web/dev-server": "^0.4.5",
+    "babel-plugin-jsx-pragmatic": "^1.0.2",
+    "jsx": "^0.9.89"
   }
 }
