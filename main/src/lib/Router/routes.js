@@ -2,7 +2,7 @@ import about from '../../../views/about.js';
 import home from '../../../views/home.js';
 import whoWeAre from '../../../views/who-we-are.js';
 import login from '../../../views/login.js';
-import ui_lib from '../../../views/ui-lib.js';
+import ui_lib from '../../views/ui-lib.js';
 
 const routes = {
     home,

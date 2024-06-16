@@ -10,7 +10,6 @@
   "scripts": {
     "test": "ava",
     "serve": "serve src --single",
-    "build": "babel src --out-dir dist"
   },
   "author": "",
   "license": "ISC",
