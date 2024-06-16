@@ -1,55 +1,40 @@
-const createElement = (tagName, attributes, ...children) => {
-  const element = document.createElement(tagName);
+/** @jsx createElement */
+const createElement = (tag, attributes, ...children) => {
+  const prop = document.createElement(tag);
 
-  for (const [key, value] of Object.entries(attributes || {})) {
-    element.setAttribute(key, value);
-  }
+  Object.keys(attributes || {}).forEach((key) => {
+    if (key === "style") {
+      Object.keys(attributes[key]).forEach((keyStyle) => {
+        prop.style[keyStyle] = prop[key][keyStyle];
+      });
+    } else {
+      prop[key] = attributes[key];
+    }
+  });
 
-  element.append(...children);
+  const addChild = (child) => {
+    if (Array.isArray(child)) {
+      child.forEach((c) => addChild(c));
+    } else if (typeof child === "object") {
+      prop.appendChild(child);
+    } else {
+      prop.appendChild(document.createTextNode(child));
+    }
+  };
 
-  element.setStyle = (styles) => {
+  prop.on = (eventType, eventHandler, options) => {
+    prop.addEventListener(eventType, eventHandler, options);
+    return prop;
+  };
+
+  prop.setStyle = (styles) => {
     Object.assign(element.style, styles);
-    return element;
+    return prop;
   };
 
-  element.appendText = (text) => {
-    element.append(text);
-    return element;
-  };
+  (children || []).forEach((c) => addChild(c));
 
-  element.on = (eventType, eventHandler, options) => {
-    element.addEventListener(eventType, eventHandler, options);
-    return element;
-  };
-
-  return element;
+  return prop;
 };
 
-// const createElement = (tagName, attributes, ...children) => {
-//   const element = document.createElement(tagName);
-
-//   for (const [key, value] of Object.entries(attributes || {})) {
-//     element.setAttribute(key, value);
-//   }
-
-//   element.append(...children);
-
-//   element.setStyle = (styles) => {
-//     Object.assign(element.style, styles);
-//     return element;
-//   };
-
-//   element.appendText = (text) => {
-//     element.append(text);
-//     return element;
-//   };
-
-//   element.on = (eventType, eventHandler, options) => {
-//     element.addEventListener(eventType, eventHandler, options);
-//     return element;
-//   };
-
-//   return element;
-// };
-
-export { createElement };
+export default createElement;
