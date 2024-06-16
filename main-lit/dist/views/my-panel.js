@@ -1,15 +1,15 @@
-import { LitElement, html, css } from "lit";
-
+import { LitElement, css } from "lit";
+import { html } from "lit-html";
 export class MyPanel extends LitElement {
   static properties = {
-    title: { type: String },
+    title: {
+      type: String
+    }
   };
-
   constructor() {
     super();
     this.title = "Main Lit";
   }
-
   render() {
     return html`
       <div class="title">
@@ -18,5 +18,4 @@ export class MyPanel extends LitElement {
     `;
   }
 }
-
 customElements.define("my-panel", MyPanel);
