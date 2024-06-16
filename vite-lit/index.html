@@ -9,7 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./src/index.css" />
 
-    <!-- bootstrap -->
+    <!-- bootstrap CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,16 +17,9 @@
 
     <!-- JS -->
     <script type="module" src="/src/my-panel.js"></script>
-    <!-- ! If I want to change the styles properties of the component from outside the js file -->
-    <style>
-      my-panel {
-        --my-panel-primary-bg: lightgreen;
-        --my-panel-primary-color: black;
-      }
-    </style>
   </head>
 
   <body>
-    <my-panel></my-panel>
+    <my-panel title="Hello World" !opened></my-panel>
   </body>
 </html>

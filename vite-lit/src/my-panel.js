@@ -1,15 +1,58 @@
 import { LitElement, css } from "lit";
 import { html } from "lit-html";
+import { when } from "lit/directives/when.js";
 
 export class MyPanel extends LitElement {
-  static properties() {
-    title: "Home Sweet Home";
+  static get properties() {
+    return {
+      title: {
+        type: String,
+      },
+      opened: {
+        type: Boolean,
+      },
+    };
+  }
+
+  constructor() {
+    super();
+    this.title = "Home Sweet Home";
+    this.opened = false;
+  }
+
+  render() {
+    return html`
+      <div>
+        <div class="title container-fluid" @click=${this._onClick}>
+          ${this.title}
+          <div>🖕</div>
+        </div>
+
+        ${when(
+          this.opened,
+          () => html`
+            <div class="body" mr-2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+              fugiat iusto fuga praesentium optio, eaque rerum! Provident
+              similique accusantium nemo autem.
+            </div>
+            <button class="btn btn-primary">Click Me</button>
+          `
+        )}
+      </div>
+    `;
+  }
+
+  _onClick() {
+    this.opened = !this.opened;
   }
 
   static styles = css`
     .title {
-      background: var(--my-panel-primary-bg, black);
-      color: var(--my-panel-primary-color, yellow);
+      background: black;
+      color: yellow;
       padding: 0.8rem;
       border: 2px solid orange;
       border-top-left-radius: 5px;
@@ -33,30 +76,6 @@ export class MyPanel extends LitElement {
       border-bottom-right-radius: 5px;
     }
   `;
-
-  constructor() {
-    super();
-    this.title = "Home Sweet Home";
-  }
-
-  render() {
-    return html`
-      <div>
-        <div class="title container-fluid">
-          ${this.title}
-          <div>🖕</div>
-        </div>
-        <div class="body" mr-2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-          accusantium nemo autem.
-        </div>
-        <button class="btn btn-outline-dark">Click Me</button>
-      </div>
-    `;
-  }
 }
 
 customElements.define("my-panel", MyPanel);
