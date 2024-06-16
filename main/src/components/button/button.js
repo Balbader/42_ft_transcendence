@@ -3,7 +3,7 @@ import { LitElement, html, css } from 'lit';
 class myBtn extends LitElement {
     render() {
         return html`
-            <div>Hello from ui_lib</div>
+            <button>Hello from ui_lib</button>
         `;
     }
 }
