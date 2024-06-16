@@ -11,6 +11,9 @@ export class MyPanel extends LitElement {
       opened: {
         type: Boolean,
       },
+      icon: {
+        type: String,
+      },
     };
   }
 
@@ -18,6 +21,12 @@ export class MyPanel extends LitElement {
     super();
     this.title = "Home Sweet Home";
     this.opened = false;
+    this.icon = "";
+  }
+
+  onIconClickHandler(e) {
+    e.stopPropagation();
+    this.dispatchEvent(new CustomEvent("icon-click", { bubbles: true }));
   }
 
   render() {
@@ -25,7 +34,7 @@ export class MyPanel extends LitElement {
       <div>
         <div class="title container-fluid" @click=${this._onClick}>
           ${this.title}
-          <div>🖕</div>
+          <div @click=${this.onIconClickHandler}>${this.icon}</div>
         </div>
 
         ${when(

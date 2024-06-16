@@ -20,6 +20,14 @@
   </head>
 
   <body>
-    <my-panel title="Hello World" !opened></my-panel>
+    <my-panel title="Hello World" icon="🖕" opened></my-panel>
   </body>
+
+  <script>
+    const el = document.querySelector("my-panel");
+    el.addEventListener("icon-click", () => {
+      console.log("I Was Clicked!");
+    });
+    console.log(el);
+  </script>
 </html>
