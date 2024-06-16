@@ -1,45 +1,40 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.loginForm = exports.label = exports.input = exports.button = void 0;
-var _createElement = require("../../lib/create-element.js");
-var button = exports.button = function button(_ref) {
-  var _ref$variant = _ref.variant,
-    variant = _ref$variant === void 0 ? 'primary' : _ref$variant,
-    text = _ref.text;
-  (0, _createElement.createElement)('button', {
-    "class": "btn btn-".concat(variant)
+import { createElement } from '../../lib/create-element.js';
+const button = ({
+  variant = 'primary',
+  text
+}) => {
+  createElement('button', {
+    class: `btn btn-${variant}`
   }).appendText(text);
 };
-var label = exports.label = function label(_ref2) {
-  var className = _ref2.className,
-    text = _ref2.text;
-  (0, _createElement.createElement)('label', {
-    "class": "form-label ".concat(className)
+const label = ({
+  className,
+  text
+}) => {
+  createElement('label', {
+    class: `form-label ${className}`
   }).appendText(text);
 };
-var input = exports.input = function input(_ref3) {
-  var value = _ref3.value,
-    type = _ref3.type,
-    className = _ref3.className,
-    placeholder = _ref3.placeholder,
-    label = _ref3.label,
-    _ref3$required = _ref3.required,
-    required = _ref3$required === void 0 ? true : _ref3$required;
-  (0, _createElement.createElement)('input', {
-    value: value,
-    type: type,
-    "class": "form-control form-control-l ".concat(className),
-    placeholder: placeholder,
-    label: label,
-    required: required
+const input = ({
+  value,
+  type,
+  className,
+  placeholder,
+  label,
+  required = true
+}) => {
+  createElement('input', {
+    value,
+    type,
+    class: `form-control form-control-l ${className}`,
+    placeholder,
+    label,
+    required
   });
 };
-var email = function email() {
-  (0, _createElement.createElement)('div', {
-    "class": 'form-group'
+const email = () => {
+  createElement('div', {
+    class: 'form-group'
   }, label({
     text: 'your email'
   }), input({
@@ -49,9 +44,9 @@ var email = function email() {
     type: 'email'
   }));
 };
-var password = function password() {
-  (0, _createElement.createElement)('div', {
-    "class": 'form-group'
+const password = () => {
+  createElement('div', {
+    class: 'form-group'
   }, label({
     text: 'your password'
   }), input({
@@ -61,11 +56,12 @@ var password = function password() {
     type: 'password'
   }));
 };
-var loginForm = exports.loginForm = function loginForm() {
-  (0, _createElement.createElement)('div', {
-    "class": 'form-group'
+const loginForm = () => {
+  createElement('div', {
+    class: 'form-group'
   }, email(), password());
 };
+export { loginForm, input, label, button };
 
 // <section id="loginForm" class="vh-100 gradient-custom">
 //  <div class="container py-5 h-100">

@@ -1,6 +1,7 @@
-import { button } from '../components/button/button.js'
+import { myBtn } from '../components/button/button.js'
+
 const ui_lib = () => {
-    button();
+    myBtn();
 }
 
 export default ui_lib;
