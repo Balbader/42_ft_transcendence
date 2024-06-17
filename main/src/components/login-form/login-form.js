@@ -5,60 +5,65 @@ const button = ({ variant = 'primary', text }) => {
         'button',
         { class: `btn btn-${variant}` },
     ).appendText(text);
-};
 
-const label = ({ className, text }) => {
-    createElement(
-        'label',
-        { class: `form-label ${className}` },
-    ).appendText(text);
-};
-
-const input = ({ value, type, className, placeholder, label, required = true }) => {
-    createElement(
-        'input',
-        {
-            value, type, class: `form-control form-control-l ${className}`, placeholder, label, required,
-        },
-    );
-};
-
-const email = () => {
-    createElement(
+    const email = () => createElement(
         'div',
         { class: 'form-group' },
         label({ text: 'your email' }),
         input({
-            placeholder: 'enter your email', label: 'email', value: '', type: 'email',
+            placeholder: 'enter your email',
+            label: 'email',
+            value: '',
+            type: 'email',
         }),
     );
-};
 
-const password = () => {
-    createElement(
+    const password = () => createElement(
         'div',
         { class: 'form-group' },
         label({ text: 'your password' }),
         input({
-            placeholder: 'enter your password', label: 'password', value: '', type: 'password',
+            placeholder: 'enter your password',
+            label: 'password',
+            value: '',
+            type: 'password',
         }),
     );
-};
 
-const loginForm = () => {
-    createElement(
+    const loginForm = () => createElement(
         'div',
         { class: 'form-group' },
         email(),
         password(),
     );
-};
 
+    const button = ({ variant = 'primary', text }) => createElement('button', { class: `btn btn-${variant}` }).appendText(text);
+
+    const label = ({ className, text }) =>
+        createElement('label', {
+            class: `form-label ${className}`,
+        }).appendText(text);
+
+    const input = ({
+        value,
+        type,
+        className,
+        placeholder,
+        label,
+        required = true,
+    }) =>
+        createElement('input', {
+            value,
+            type,
+            class: `form-control form-control-l ${className}`,
+            placeholder,
+            label,
+            required,
+        });
+
+}
 export {
-    loginForm,
-    input,
-    label,
-    button,
+    loginForm, input, label, button,
 };
 
 // <section id="loginForm" class="vh-100 gradient-custom">
