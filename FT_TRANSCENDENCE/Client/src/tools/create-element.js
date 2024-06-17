@@ -14,7 +14,7 @@ const createElement = (tag, attributes, ...children) => {
       });
     } else if (key === "class") {
       Object.keys(attributes[key]).forEach((value) => {
-        prop.style[value] = prop[key][value];
+        prop.class[value] = prop[key][value];
       });
     } else {
       prop[key] = attributes[key];
