@@ -11,9 +11,9 @@
             "id": "dcdb3017e030aac9",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/Shema Docker Container.png"
+                "file": "Excalidraw/Shema Docker Container.md"
               }
             }
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Shema Docker Container.png",
+                "file": "Excalidraw/Shema Docker Container.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Shema Docker Container.png",
+                "file": "Excalidraw/Shema Docker Container.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Shema Docker Container.png"
+                "file": "Excalidraw/Shema Docker Container.md"
               }
             }
           }
@@ -147,8 +147,8 @@
   },
   "active": "dcdb3017e030aac9",
   "lastOpenFiles": [
-    "Excalidraw/Shema Docker Container.md",
     "Excalidraw/Shema Docker Container.png",
+    "Excalidraw/Shema Docker Container.md",
     "Welcome.md",
     "Excalidraw",
     "Untitled.canvas",

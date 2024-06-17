@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
 ]
 
 MIDDLEWARE = [
@@ -144,6 +145,14 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+# Email config
+EMAIL_HOST = 'gsmtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'basilalbapro@gmail.com'
+EMAIL_HOST_PASSWORD = 'Drummerworld090283#'
+EMAIL_USE_TLS = True
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
