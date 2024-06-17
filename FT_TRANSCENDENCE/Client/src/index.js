@@ -13,7 +13,7 @@ const button = ({ variant = "btn btn-outline-darck", text = "Click Me" }) =>
 
 const textBlock = createElement(
   "div",
-  "class=container container-fluid",
+  { class: "container container-fluid" },
   "Hello World"
 );
 

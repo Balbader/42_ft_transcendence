@@ -5,16 +5,16 @@ const createElement = (tag, attributes, ...children) => {
 
   // for (const [key, value] of Object.entries(attributes || {})) {
   //   prop.setAttribute(key, value);
-  // };
+  // }
 
   Object.keys(attributes || {}).forEach((key) => {
     if (key === "style") {
-      Object.keys(attributes[key]).forEach((keyStyle) => {
-        prop.style[keyStyle] = prop[key][keyStyle];
+      Object.keys(attributes[key]).forEach((value) => {
+        prop.style[value] = prop[key][value];
       });
     } else if (key === "class") {
-      Object.keys(attributes[key]).forEach((keyStyle) => {
-        prop.style[keyStyle] = prop[key][keyStyle];
+      Object.keys(attributes[key]).forEach((value) => {
+        prop.style[value] = prop[key][value];
       });
     } else {
       prop[key] = attributes[key];
