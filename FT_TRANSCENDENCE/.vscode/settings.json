@@ -13,5 +13,8 @@
   "editor.guides.indentation": false,
   "editor.columnSelection": false,
   "editor.fontSize": 12,
-  "editor.renderWhitespace": "none"
+  "editor.renderWhitespace": "none",
+  "eslint.enable": false,
+  "editor.insertSpaces": false,
+  "editor.bracketPairColorization.enabled": false
 }

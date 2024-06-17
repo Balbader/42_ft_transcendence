@@ -16,7 +16,7 @@ export class NavBarOut extends LitElement {
   constructor() {
     super();
     this.imgPath = {
-      path: "../components/nav-bar/nav-bar-assets/ping-pong.png",
+      path: "./src/components/nav-bar/nav-bar-assets/ping-pong.png",
     };
   }
 
@@ -28,13 +28,12 @@ export class NavBarOut extends LitElement {
             <img
               src="${this.imgPath.path}"
               alt=""
-              width=""
-              height=""
-              class="d-inline-block align-text-top"
+              width="60"
+              height="50"
+              class="d-inline-block align-text-center"
             />
             FT_TRANSCENDENCE
           </a>
-
           <button
             class="navbar-toggler"
             type="button"
