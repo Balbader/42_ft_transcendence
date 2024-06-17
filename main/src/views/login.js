@@ -1,4 +1,4 @@
-import {loginForm} from '../components/login-form/login-form.js';
+import { loginForm } from '../components/login-form/login-form.js';
 
 const loginMarkup = () => loginForm();
 
