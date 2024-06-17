@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import "../components/buttons/test-button/test-button.js";
 
 /**
  * An example element.
@@ -9,31 +10,30 @@ import { LitElement, html, css } from "lit";
  */
 export class MyElement extends LitElement {
   static get styles() {
-    return css`
-      :host {
-        display: block;
-        border: solid 1px gray;
-        padding: 16px;
-        max-width: 800px;
-      }
-    `;
+    const { cssRules } = document.styleSheets[0];
+
+    const globalStyle = css([
+      Object.values(cssRules)
+        .map((rule) => rule.cssText)
+        .join("\n"),
+    ]);
+
+    return [globalStyle, css``];
   }
 
-  static get properties() {
-    return {
-      /**
-       * The name to say "Hello" to.
-       * @type {string}
-       */
-      name: { type: String },
+  // static styles = css`
+  //   :host {
+  //     display: block;
+  //     border: solid 1px gray;
+  //     padding: 16px;
+  //     max-width: 800px;
+  //   }
+  // `;
 
-      /**
-       * The number of times the button has been clicked.
-       * @type {number}
-       */
-      count: { type: Number },
-    };
-  }
+  static properties = {
+    name: { type: String },
+    count: { type: Number },
+  };
 
   constructor() {
     super();
@@ -43,10 +43,17 @@ export class MyElement extends LitElement {
 
   render() {
     return html`
-      <h1>${this.sayHello(this.name)}!</h1>
-      <button @click=${this._onClick} part="button">
+      <h1 class="container container-fluid ml-2 mt-2">
+        ${this.sayHello(this.name)}!
+      </h1>
+      <button
+        class="btn btn-outline-dark ml-4"
+        @click=${this._onClick}
+        part="button"
+      >
         Click Count: ${this.count}
       </button>
+      <test-button></test-button>
       <slot></slot>
     `;
   }
@@ -56,14 +63,9 @@ export class MyElement extends LitElement {
     this.dispatchEvent(new CustomEvent("count-changed"));
   }
 
-  /**
-   * Formats a greeting
-   * @param name {string} The name to say "Hello" to
-   * @returns {string} A greeting directed at `name`
-   */
   sayHello(name) {
     return `Hello, ${name}`;
   }
 }
 
-window.customElements.define("my-element", MyElement);
+customElements.define("my-element", MyElement);

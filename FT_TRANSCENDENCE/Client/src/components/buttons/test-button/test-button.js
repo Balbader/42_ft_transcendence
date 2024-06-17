@@ -1,29 +1,21 @@
-import {
-  LitElement,
-  css,
-  html,
-} from "../../../../../Client/node_modules/lit-element";
+import { LitElement, html, css } from "lit";
 
-export class SimpleGreeting extends LitElement {
-  static properties = {
-    name: {},
-  };
-  // Define scoped styles right with your component, in plain CSS
-  static styles = css`
-    :host {
-      color: blue;
-    }
-  `;
+export class TestButton extends LitElement {
+  // ! possible to import the following static get globally?
+  static get styles() {
+    const { cssRules } = document.styleSheets[0];
 
-  constructor() {
-    super();
-    // Declare reactive properties
-    this.name = "World";
+    const globalStyle = css([
+      Object.values(cssRules)
+        .map((rule) => rule.cssText)
+        .join("\n"),
+    ]);
+
+    return [globalStyle, css``];
   }
 
-  // Render the UI as a function of component state
   render() {
-    return html`<p>Hello, ${this.name}!</p>`;
+    return html` <button class="btn btn-primary ml-2">Test Btn</button> `;
   }
 }
-window.customElements.define("simple-greeting", SimpleGreeting);
+customElements.define("test-button", TestButton);
