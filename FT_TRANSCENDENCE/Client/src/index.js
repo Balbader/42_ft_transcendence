@@ -8,14 +8,17 @@ const handleClick = () => {
   console.log("Button was clicked!");
 };
 
-const button = ({ variant = "btn btn-outline-darck", text = "Click Me" }) =>
-  createElement("button", `${variant}`, `${text}`).on("click", handleClick);
+// const button = ({ variant = "btn btn-outline-darck", text = "Click Me" }) => {
+//   const btn = createElement("button", `${variant}`, `${text}`).on(
+//     "click",
+//     handleClick
+//   );
+//   return btn;
+// };
 
-const textBlock = createElement(
-  "div",
-  { class: "container container-fluid" },
-  "Hello World"
-);
+const button = createElement("button", {}, "Click Me").on("click", handleClick);
+
+const textBlock = createElement("div", {}, "Hello World");
 
 app.appendChild(textBlock);
 app.appendChild(button);
