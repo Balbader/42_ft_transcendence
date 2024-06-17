@@ -4,20 +4,24 @@ import "./components/nav-bar/nav-bar-out.js";
 import { LitElement, html, css } from "lit";
 
 export class MyIndex extends LitElement {
-  static styles = [
-    css`
-      :host {
-        display: block;
-      }
-    `,
-  ];
+  static get styles() {
+    const { cssRules } = document.styleSheets[0];
+
+    const globalStyle = css([
+      Object.values(cssRules)
+        .map((rule) => rule.cssText)
+        .join("\n"),
+    ]);
+
+    return [globalStyle, css``];
+  }
+
+  constructor() {
+    super();
+  }
 
   render() {
     return html` <nav-bar-out></nav-bar-out> `;
   }
 }
 window.customElements.define("my-index", MyIndex);
-
-const nav = `<my-index />`;
-const app = document.getElementById("app");
-app.appendChild(nav);

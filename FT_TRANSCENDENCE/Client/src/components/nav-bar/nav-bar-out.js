@@ -13,13 +13,20 @@ export class NavBarOut extends LitElement {
     return [globalStyle, css``];
   }
 
+  constructor() {
+    super();
+    this.imgPath = {
+      path: "../components/nav-bar/nav-bar-assets/ping-pong.png",
+    };
+  }
+
   render() {
     return html`
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="home">
             <img
-              src="./assets/logo/ping-pong.png"
+              src="${this.imgPath.path}"
               alt=""
               width=""
               height=""
