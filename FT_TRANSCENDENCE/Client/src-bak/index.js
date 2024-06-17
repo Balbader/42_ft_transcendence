@@ -1,5 +1,3 @@
-/** @jsx dom */
-
 import "./components/buttons/test-button/test-button.js";
 import createElement from "./tools/create-element.js";
 
