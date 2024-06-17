@@ -21,15 +21,6 @@ export class MyElement extends LitElement {
     return [globalStyle, css``];
   }
 
-  // static styles = css`
-  //   :host {
-  //     display: block;
-  //     border: solid 1px gray;
-  //     padding: 16px;
-  //     max-width: 800px;
-  //   }
-  // `;
-
   static properties = {
     name: { type: String },
     count: { type: Number },

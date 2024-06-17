@@ -8,5 +8,10 @@
   "prettier.singleQuote": true,
   "prettier.singleAttributePerLine": true,
   "prettier.jsxSingleQuote": true,
-  "prettier.bracketSameLine": false
+  "prettier.bracketSameLine": false,
+  "editor.indentSize": "tabSize",
+  "editor.guides.indentation": false,
+  "editor.columnSelection": false,
+  "editor.fontSize": 12,
+  "editor.renderWhitespace": "none"
 }
