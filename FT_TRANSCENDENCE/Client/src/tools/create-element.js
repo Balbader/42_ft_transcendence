@@ -3,8 +3,16 @@
 const createElement = (tag, attributes, ...children) => {
   const prop = document.createElement(tag);
 
+  // for (const [key, value] of Object.entries(attributes || {})) {
+  //   prop.setAttribute(key, value);
+  // };
+
   Object.keys(attributes || {}).forEach((key) => {
     if (key === "style") {
+      Object.keys(attributes[key]).forEach((keyStyle) => {
+        prop.style[keyStyle] = prop[key][keyStyle];
+      });
+    } else if (key === "class") {
       Object.keys(attributes[key]).forEach((keyStyle) => {
         prop.style[keyStyle] = prop[key][keyStyle];
       });
