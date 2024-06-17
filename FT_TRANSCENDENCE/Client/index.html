@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ft_transcendence</title>
-
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -10,15 +9,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./src/index.css" />
+    <!-- Web Components -->
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
 
     <!-- JS -->
     <script type="module" src="./src/index.js"></script>
-    <!-- <script type="module" src="./src/components/buttons/test-button/test-button.js"></script> -->
-
-    <!-- lit -->
-    <script type="module" src="https://cdn.skypack.dev/lit"></script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -27,12 +23,18 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <style>
+      p {
+        border: solid 1px green;
+        padding: 20px;
+        margin: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div id="app">
-      <test-button></test-button>
-    </div>
-
+    <my-element>
+      <p>This is child content</p>
+    </my-element>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
