@@ -79,12 +79,6 @@ export class NavBarIn extends LitElement {
                 <li class="nav-item">
                   <a class="nav-link" href="#">Dashboard</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Team</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Settings</a>
-                </li>
               </ul>
             </div>
 
