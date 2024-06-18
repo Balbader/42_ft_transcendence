@@ -1,5 +1,6 @@
 import "./sign-up-page.js";
 import "./login-page.js";
+import "./profile-page.js";
 import "../components/footer/footer-out.js";
 import "../components/nav-bar/nav-bar-in.js";
 import { LitElement, html, css } from "lit";
@@ -27,6 +28,7 @@ export class HomePage extends LitElement {
       <nav-bar-in></nav-bar-in>
       <sign-up-page></sign-up-page>
       <login-page></login-page>
+      <profile-page></profile-page>
       <footer-out></footer-out>
     `;
   }
