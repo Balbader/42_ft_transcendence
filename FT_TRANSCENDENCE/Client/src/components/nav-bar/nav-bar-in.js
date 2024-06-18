@@ -87,6 +87,7 @@ export class NavBarIn extends LitElement {
                 </li>
               </ul>
             </div>
+
               <div class="dropdown">
                 <a
                   data-mdb-dropdown-init
@@ -105,6 +106,7 @@ export class NavBarIn extends LitElement {
                   />
                 </a>
               </div>
+
             </div>
           </div>
         </div>
