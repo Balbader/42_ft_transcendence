@@ -1,4 +1,3 @@
-import createElement from "../src/tools/create-element.js";
 import "./my-element/my-element.js";
 import "./components/nav-bar/nav-bar-out.js";
 import { LitElement, html, css } from "lit";
