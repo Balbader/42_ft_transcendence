@@ -67,13 +67,14 @@ export class NavBarOut extends LitElement {
               </li>
 
               <li class="nav-item pe-3">
-                <a class="nav-link" aria-current="page" href="ui_lib">
-                  ui lib
-                </a>
-              </li>
-
-              <li class="nav-item pe-3">
-                <a class="nav-link" aria-current="page" href="login"> Login </a>
+                <button
+                  type="button"
+                  aria-current="page"
+                  class="btn btn-outline-light"
+                  href="login"
+                >
+                  Login
+                </button>
               </li>
 
               <li class="nav-item">
