@@ -79,6 +79,15 @@ export class NavBarIn extends LitElement {
                 <li class="nav-item">
                   <a class="nav-link" href="#">Dashboard</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Password Reset</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Log Out</a>
+                </li>
               </ul>
             </div>
 
