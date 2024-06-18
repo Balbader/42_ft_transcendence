@@ -1,0 +1,20 @@
+{
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.tabSize": 4,
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.useTabs": true,
+  "prettier.tabWidth": 4,
+  "prettier.singleQuote": true,
+  "prettier.singleAttributePerLine": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.bracketSameLine": false,
+  "editor.indentSize": "tabSize",
+  "editor.guides.indentation": false,
+  "editor.columnSelection": false,
+  "editor.fontSize": 14,
+  "editor.renderWhitespace": "none",
+  "eslint.enable": false,
+  "editor.insertSpaces": false,
+  "editor.bracketPairColorization.enabled": false
+}
