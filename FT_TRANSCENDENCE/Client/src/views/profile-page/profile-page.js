@@ -19,7 +19,6 @@ export class ProfilePage extends LitElement {
 
   render() {
     return html`
-      <!-- Profile 1 - Bootstrap Brain Component -->
       <section class="bg-light py-3 py-md-5 py-xl-8">
         <div class="container">
           <div class="row gy-4 gy-lg-0">
