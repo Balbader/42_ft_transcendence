@@ -28,9 +28,11 @@ export class NavBarIn extends LitElement {
             data-mdb-collapse-init
             class="navbar-toggler"
             type="button"
+              FT_TRANSCENDENCE
             data-mdb-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
+
             aria-label="Toggle navigation">
             <i class="fas fa-bars"></i
 					>
