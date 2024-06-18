@@ -12,7 +12,7 @@
   "editor.indentSize": "tabSize",
   "editor.guides.indentation": false,
   "editor.columnSelection": false,
-  "editor.fontSize": 12,
+  "editor.fontSize": 14,
   "editor.renderWhitespace": "none",
   "eslint.enable": false,
   "editor.insertSpaces": false,
