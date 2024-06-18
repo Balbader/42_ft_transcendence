@@ -77,7 +77,7 @@ export class SignUpPage extends LitElement {
                               type="number"
                               id="form3Example3c"
                               class="form-control"
-                              placeholder="DD/MM/YYYY"
+                              placeholder="Date Of Birth (DD/MM/YYYY)"
                             />
                           </div>
                         </div>
@@ -93,7 +93,7 @@ export class SignUpPage extends LitElement {
                               type="email"
                               id="form3Example3c"
                               class="form-control"
-                              placeholder="email"
+                              placeholder="Email"
                             />
                           </div>
                         </div>
