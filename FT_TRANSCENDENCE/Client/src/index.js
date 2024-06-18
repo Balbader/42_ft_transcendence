@@ -1,6 +1,5 @@
 import "./components/nav-bar/nav-bar-out.js";
 import "./views-static/home-page.js";
-
 import { LitElement, html, css } from "lit";
 
 export class MyIndex extends LitElement {
