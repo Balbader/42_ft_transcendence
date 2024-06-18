@@ -1,3 +1,4 @@
+/** @jsx NavVBafOut */
 import { LitElement, html, css } from "lit";
 
 export class NavBarOut extends LitElement {
@@ -16,7 +17,7 @@ export class NavBarOut extends LitElement {
   constructor() {
     super();
     this.imgPath = {
-      path: "./src/components/nav-bar/nav-bar-assets/ping-pong.png",
+      path: "./src/components/nav-bar/nav-bar-assets/ping-pong (1).png",
     };
   }
 
@@ -28,9 +29,9 @@ export class NavBarOut extends LitElement {
             <img
               src="${this.imgPath.path}"
               alt=""
-              width="60"
-              height="50"
-              class="d-inline-block align-text-center"
+              width="70"
+              height="60"
+              class="d-inline-block align-text-center navbar-brand"
             />
             FT_TRANSCENDENCE
           </a>
@@ -52,25 +53,27 @@ export class NavBarOut extends LitElement {
           >
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item pe-3">
-                <a class="nav-link" aria-current="page" href="home">Home</a>
+                <a class="nav-link" aria-current="page" href="home"> Home </a>
               </li>
 
               <li class="nav-item pe-3">
-                <a class="nav-link" aria-current="page" href="about">About</a>
+                <a class="nav-link" aria-current="page" href="about"> About </a>
               </li>
 
               <li class="nav-item pe-3">
-                <a class="nav-link" aria-current="page" href="whoWeAre"
-                  >Who We Are</a
-                >
+                <a class="nav-link" aria-current="page" href="whoWeAre">
+                  Who We Are
+                </a>
               </li>
 
               <li class="nav-item pe-3">
-                <a class="nav-link" aria-current="page" href="ui_lib">ui lib</a>
+                <a class="nav-link" aria-current="page" href="ui_lib">
+                  ui lib
+                </a>
               </li>
 
               <li class="nav-item pe-3">
-                <a class="nav-link" aria-current="page" href="login">Login</a>
+                <a class="nav-link" aria-current="page" href="login"> Login </a>
               </li>
 
               <li class="nav-item">
