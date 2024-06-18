@@ -1,8 +1,8 @@
-import "./sign-up-page.js";
-import "./login-page.js";
-import "./profile-page.js";
-import "../components/footer/footer-out.js";
-import "../components/nav-bar/nav-bar-in.js";
+import "../signup-page/sign-up-page.js";
+import "../login-page/login-page.js";
+import "../profile-page/profile-page.js";
+import "../../components/footer/footer-out.js";
+import "../../components/nav-bar/nav-bar-in.js";
 import { LitElement, html, css } from "lit";
 
 export class HomePage extends LitElement {
