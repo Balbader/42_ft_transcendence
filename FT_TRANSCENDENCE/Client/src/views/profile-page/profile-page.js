@@ -28,7 +28,7 @@ export class ProfilePage extends LitElement {
                 <div class="col-12">
                   <div class="card widget-card border-light shadow-sm">
                     <div class="card-header text-bg-dark">
-                      Welcome, Ethan Leo
+                      Hello, Ethan Leo!
                     </div>
 
                     <div class="card-body">
@@ -81,6 +81,17 @@ export class ProfilePage extends LitElement {
                           class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3"
                         >
                           <div class="p-2">Leo</div>
+                        </div>
+
+                        <div
+                          class="col-5 col-md-3 bg-light border-bottom border-white border-3"
+                        >
+                          <div class="p-2">Date Of Birth</div>
+                        </div>
+                        <div
+                          class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3"
+                        >
+                          <div class="p-2">08/06/1932</div>
                         </div>
 
                         <div
