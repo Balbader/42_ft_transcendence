@@ -152,16 +152,20 @@ export class SignUpPage extends LitElement {
                             type="button"
                             data-mdb-button-init
                             data-mdb-ripple-init
-                            class="btn btn-primary btn-lg"
+                            class="btn btn-primary btn-lg w-100"
                           >
                             Register
                           </button>
+                        </div>
 
+                        <div
+                          class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"
+                        >
                           <button
                             type="button"
                             data-mdb-button-init
                             data-mdb-ripple-init
-                            class="btn btn-dark bth-lg"
+                            class="btn btn-outline-dark btn-lg w-100"
                           >
                             Sign Up With 42
                           </button>

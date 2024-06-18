@@ -87,7 +87,7 @@ export class LoginPage extends LitElement {
                             type="button"
                             data-mdb-button-init
                             data-mdb-ripple-init
-                            class="btn btn-primary btn-lg"
+                            class="btn btn-primary btn-lg w-100"
                           >
                             Login
                           </button>
