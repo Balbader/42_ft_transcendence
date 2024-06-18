@@ -1,5 +1,6 @@
-import "./my-element/my-element.js";
 import "./components/nav-bar/nav-bar-out.js";
+import "./views-static/home-page.js";
+
 import { LitElement, html, css } from "lit";
 
 export class MyIndex extends LitElement {
@@ -20,7 +21,7 @@ export class MyIndex extends LitElement {
   }
 
   render() {
-    return html` <nav-bar-out></nav-bar-out> `;
+    return html` <home-page></home-page> `;
   }
 }
 window.customElements.define("my-index", MyIndex);
