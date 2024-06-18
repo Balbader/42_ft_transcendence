@@ -41,13 +41,12 @@ export class LoginPage extends LitElement {
                             class="form-outline flex-fill mb-0"
                           >
                             <input
+                              name="email"
                               type="email"
                               id="form3Example3c"
                               class="form-control"
+                              placeholder="email"
                             />
-                            <label class="form-label" for="form3Example3c"
-                              >Your Email</label
-                            >
                           </div>
                         </div>
 
@@ -58,13 +57,12 @@ export class LoginPage extends LitElement {
                             class="form-outline flex-fill mb-0"
                           >
                             <input
+                              name="password"
                               type="password"
                               id="form3Example4c"
                               class="form-control"
+                              placeholder="Password"
                             />
-                            <label class="form-label" for="form3Example4c"
-                              >Password</label
-                            >
                           </div>
                         </div>
 
