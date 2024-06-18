@@ -16,6 +16,7 @@ export class SettingsPage extends LitElement {
   constructor() {
     super();
   }
+
   render() {
     return html`
       <!-- Profile 1 - Bootstrap Brain Component -->
