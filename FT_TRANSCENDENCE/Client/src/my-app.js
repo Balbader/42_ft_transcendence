@@ -2,6 +2,7 @@ import "./views/home-page/home-page.js";
 import "./views/login-page/login-page.js";
 import "./views/profile-page/profile-page.js";
 import "./views/settings-page/settings-page.js";
+import "./views/pwd-change-page/password-change-page.js";
 import { LitElement, html, css } from "lit";
 
 export class MyApp extends LitElement {
@@ -22,6 +23,9 @@ export class MyApp extends LitElement {
       <br />
       <h1>User Settings Page</h1>
       <settings-page></settings-page>
+      <br />
+      <h1>User Password Reset Page</h1>
+      <password-change-page></password-change-page>
     `;
   }
 }
