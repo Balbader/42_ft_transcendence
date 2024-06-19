@@ -66,9 +66,7 @@ export class LoginPage extends LitElement {
                           </div>
                         </div>
 
-                        <div
-                          class="form-check d-flex justify-content-center mb-5"
-                        >
+                        <div class="form-check d-flex mb-5">
                           <input
                             class="form-check-input me-2"
                             type="checkbox"

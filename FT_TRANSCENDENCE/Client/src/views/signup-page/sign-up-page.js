@@ -130,9 +130,8 @@ export class SignUpPage extends LitElement {
                           </div>
                         </div>
 
-                        <div
-                          class="form-check d-flex justify-content-center mb-5"
-                        >
+                        <div class="form-check d-flex mb-5">
+                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                           <input
                             class="form-check-input me-2"
                             type="checkbox"
