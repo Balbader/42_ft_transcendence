@@ -92,6 +92,18 @@ export class LoginPage extends LitElement {
                             Login
                           </button>
                         </div>
+                        <div
+                          class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"
+                        >
+                          <button
+                            type="button"
+                            data-mdb-button-init
+                            data-mdb-ripple-init
+                            class="btn btn-outline-dark btn-lg w-100"
+                          >
+                            Login With 42
+                          </button>
+                        </div>
                       </form>
                     </div>
                     <div

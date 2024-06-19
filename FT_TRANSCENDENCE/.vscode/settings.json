@@ -4,7 +4,7 @@
   "editor.fontLigatures": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.useTabs": true,
-  "prettier.tabWidth": 4,
+  "prettier.tabWidth": 2,
   "prettier.singleQuote": true,
   "prettier.singleAttributePerLine": true,
   "prettier.jsxSingleQuote": true,
@@ -16,5 +16,11 @@
   "editor.renderWhitespace": "none",
   "eslint.enable": false,
   "editor.insertSpaces": false,
-  "editor.bracketPairColorization.enabled": false
+  "editor.bracketPairColorization.enabled": false,
+  "editor.tabCompletion": "on",
+  "editor.tabFocusMode": false,
+  "editor.detectIndentation": false,
+  "editor.stickyTabStops": true,
+  "eslint.useESLintClass": true,
+  "prettier.trailingComma": "all"
 }

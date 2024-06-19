@@ -114,16 +114,16 @@ export class ProfilePage extends LitElement {
                         >
                           <div class="p-2">leo@example.com</div>
                         </div>
-                      </div>
-                      <div>
-                        <button
-                          type="button"
-                          aria-current="page"
-                          class="btn btn-outline-light"
-                          href="login"
-                        >
-                          Login
-                        </button>
+                        <div>
+                          <button
+                            type="button"
+                            aria-current="page"
+                            class="btn btn-primary mt-3"
+                            href="login"
+                          >
+                            Update Profile Info
+                          </button>
+                        </div>
                       </div>
                     </div>
                     <div

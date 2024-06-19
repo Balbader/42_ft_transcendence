@@ -80,7 +80,9 @@ export class DashboardPage extends LitElement {
                                     <th>Game</th>
                                     <th>Date</th>
                                     <th>Player 1</th>
+                                    <th>Score P1</th>
                                     <th>Player 2</th>
+                                    <th>Score P2</th>
                                     <th>Winner</th>
                                     <th>Looser</th>
                                   </tr>
@@ -104,7 +106,15 @@ export class DashboardPage extends LitElement {
                                     </td>
 
                                     <td>
+                                      <h6 class="mb-1">12</h6>
+                                    </td>
+
+                                    <td>
                                       <h6 class="mb-1">La Mere Noel</h6>
+                                    </td>
+
+                                    <td>
+                                      <h6 class="mb-1">777</h6>
                                     </td>
 
                                     <td>
@@ -138,7 +148,15 @@ export class DashboardPage extends LitElement {
                                     </td>
 
                                     <td>
+                                      <h6 class="mb-1">54</h6>
+                                    </td>
+
+                                    <td>
                                       <h6 class="mb-1">Le Chat Potte</h6>
+                                    </td>
+
+                                    <td>
+                                      <h6 class="mb-1">125</h6>
                                     </td>
 
                                     <td>
@@ -172,18 +190,26 @@ export class DashboardPage extends LitElement {
                                     </td>
 
                                     <td>
+                                      <h6 class="mb-1">12</h6>
+                                    </td>
+
+                                    <td>
                                       <h6 class="mb-1">Shtrouphette</h6>
                                     </td>
 
                                     <td>
-                                      <span class=" btn bg-success text-light"
-                                        >Ethan Leo</span
+                                      <h6 class="mb-1">12</h6>
+                                    </td>
+
+                                    <td>
+                                      <span class=" btn bg-warning text-light"
+                                        >Tie</span
                                       >
                                     </td>
 
                                     <td>
-                                      <span class=" btn bg-danger text-light"
-                                        >Shtroumphette</span
+                                      <span class=" btn bg-warning text-light"
+                                        >Tie</span
                                       >
                                     </td>
                                   </tr>
