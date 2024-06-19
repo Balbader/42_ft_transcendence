@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
 
-export class DashboardPage extends LitElement {
+export class DashboardComponent extends LitElement {
   static get styles() {
     const { cssRules } = document.styleSheets[0];
 
@@ -371,4 +371,4 @@ export class DashboardPage extends LitElement {
     `;
   }
 }
-customElements.define("dashboard-page", DashboardPage);
+customElements.define("dashboard-component", DashboardComponent);
