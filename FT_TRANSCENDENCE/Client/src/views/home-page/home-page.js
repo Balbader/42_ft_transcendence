@@ -2,7 +2,7 @@ import "../signup-page/sign-up-page.js";
 import "../login-page/login-page.js";
 import "../profile-page/profile-page.js";
 import "../settings-page/settings-page.js";
-import "../pwd-change-page/pwd-change-page.js";
+import "../pwd-change-page/password-change-page.js";
 import "../dashboard-page/dashboard-page.js";
 import "../../components/footer/footer-out.js";
 import "../../components/nav-bar/nav-bar-in.js";
