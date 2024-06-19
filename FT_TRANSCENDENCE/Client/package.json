@@ -2,8 +2,8 @@
   "name": "front",
   "version": "2.0.1",
   "description": "ft_transcendence client",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "my-app.js",
+  "module": "my-app.js",
   "type": "module",
   "scripts": {
     "build": "echo \"This is not a TypeScript project, so no need to build.\"",
