@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "b88c0afe1a5c1153",
+        "id": "a690fa2d090d743b",
         "type": "tabs",
         "children": [
           {
-            "id": "dcdb3017e030aac9",
+            "id": "6a42752d4fc0b6c3",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Shema Docker Container.md"
+                "file": "TODO''s/FRONT ISSUES.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Shema Docker Container.md",
+                "file": "TODO''s/FRONT ISSUES.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Shema Docker Container.md",
+                "file": "TODO''s/FRONT ISSUES.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Shema Docker Container.md"
+                "file": "TODO''s/FRONT ISSUES.md"
               }
             }
           }
@@ -145,10 +147,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "dcdb3017e030aac9",
+  "active": "6a42752d4fc0b6c3",
   "lastOpenFiles": [
-    "Excalidraw/Shema Docker Container.png",
+    "TODO''s/FRONT ISSUES.md",
+    "TODO''s",
+    "2024-06-19.md",
     "Excalidraw/Shema Docker Container.md",
+    "Excalidraw/Shema Docker Container.png",
     "Welcome.md",
     "Excalidraw",
     "Untitled.canvas",
