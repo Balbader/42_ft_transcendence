@@ -15,6 +15,23 @@ export class SettingsPage extends LitElement {
 
   constructor() {
     super();
+    // ! Fix: this.displaySelectedImage not working. The selected picture does not upload
+    this.displaySelectedImage = {
+      displaySelectedImage: function displaySelectedImage(event, elementId) {
+        const selectedImage = document.getElementById(elementId);
+        const fileInput = event.target;
+
+        if (fileInput.files && fileInput.files[0]) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            selectedImage.src = e.target.result;
+          };
+
+          reader.readAsDataURL(fileInput.files[0]);
+        }
+      },
+    };
   }
 
   render() {
@@ -59,68 +76,41 @@ export class SettingsPage extends LitElement {
                       tabindex="0"
                     >
                       <h5 class="mb-3">Settings</h5>
-                      <form action="#!" class="row gy-3 gy-xxl-4">
-                        <div class="col-12">
-                          <div class="row gy-2 pt-4">
-                            <label class="col-12 form-label m-0"
-                              >Profile Image</label
-                            >
-                            <div class="col-12">
-                              <div>
-                                <div class="mb-4 d-flex justify-content-center">
-                                  <img
-                                    id="selectedImage"
-                                    src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"
-                                    alt="example placeholder"
-                                    style="width: 300px;"
+                      <div class="col-12">
+                        <div class="row gy-2 pt-4">
+                          <label class="col-12 form-label m-0"
+                            >Profile Image</label
+                          >
+                          <div class="col-12">
+                            <div>
+                              <div class=" d-flex ">
+                                <img
+                                  id="selectedImage"
+                                  src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"
+                                  alt="example placeholder"
+                                  style="width: 300px;"
+                                />
+                              </div>
+                              <div class="d-flex">
+                                <div data-mdb-ripple-init class="">
+                                  <label
+                                    class="badge bg-dark form-label text-white mb-4"
+                                    for="customFile1"
+                                    >Upload file</label
+                                  >
+                                  <input
+                                    type="file"
+                                    class="form-control d-none"
+                                    id="customFile1"
+                                    onchange="displaySelectedImage(event, 'selectedImage')"
                                   />
                                 </div>
-                                <div class="d-flex justify-content-center">
-                                  <div
-                                    data-mdb-ripple-init
-                                    class="btn btn-primary btn-rounded"
-                                  >
-                                    <label
-                                      class="form-label text-white m-1"
-                                      for="customFile1"
-                                      >Choose file</label
-                                    >
-                                    <input
-                                      type="file"
-                                      class="form-control d-none"
-                                      id="customFile1"
-                                      onchange="displaySelectedImage(event, 'selectedImage')"
-                                    />
-                                  </div>
-                                </div>
                               </div>
-                              <img
-                                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                                class="img-fluid"
-                                alt="Profile Picture"
-                              />
-                            </div>
-                            <!-- !fix upload and delete img icons not showing up -->
-                            <div class="">
-                              <a href="#!">
-                                <svg
-                                  class="pb-0"
-                                  width="32"
-                                  height="32"
-                                  fill="currentColor"
-                                  viewBox="0 0 16 16"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  ...
-                                </svg>
-                              </a>
-                              <a href="#!" class="badge text-dark"
-                                >Upload New Img</a
-                              >
                             </div>
                           </div>
                         </div>
-
+                      </div>
+                      <form action="#!" class="row gy-3 gy-xxl-4">
                         <div class="col-12 col-md-6">
                           <label for="inputFirstName" class="form-label"
                             >First Name</label
