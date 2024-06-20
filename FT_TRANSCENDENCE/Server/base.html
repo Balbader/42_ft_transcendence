@@ -20,6 +20,21 @@
       type="module"
       src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     ></script>
+
+    <!-- * Do I need Traversy bootstrap links? -->
+    <script
+      type="module"
+      src="{% static 'pages/js/jquery-3.3.1.min.js' %}"
+    ></script>
+    <script
+      type="module"
+      src="{% static 'pages/js/bootstrap.bundle.min.js' %}"
+    ></script>
+    <script
+      type="module"
+      src="{% static 'pages/js/lightbox.min.js' %}"
+    ></script>
+    <script type="module" src="{% static 'pages/js/main.js' %}"></script>
   </head>
 
   <body>
@@ -33,10 +48,5 @@
 
     <!-- Footer -->
     {% include "partials/_footer.html" %}
-
-    <script src="{% static 'pages/js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'pages/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'pages/js/lightbox.min.js' %}"></script>
-    <script src="{% static 'pages/js/main.js' %}"></script>
   </body>
 </html>
