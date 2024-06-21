@@ -1,0 +1,166 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img
+        src=" {% static 'img/ping-pong (1).png' %} "
+        alt=""
+        width="70"
+        height="60"
+        class="d-inline-block align-text-center navbar-brand"
+      />
+      FT_TRANSCENDENCE
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse text-bg-dark"
+      id="navbarTogglerDemo02"
+    >
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item pe-3">
+          <a class="nav-link" aria-current="page" href="/"> Home </a>
+        </li>
+
+        <li class="nav-item pe-3">
+          <a class="nav-link" aria-current="page" href="about"> About </a>
+        </li>
+
+        <li class="nav-item pe-3">
+          <a class="nav-link" aria-current="page" href="whoWeAre">
+            Who We Are
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn bg-light ml-2" aria-current="page" href="/">
+            Login
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-outline-warning ml-2" aria-current="page" href="/">
+            SignUp
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% comment %} ! commented part: to use as reference for navigation {% endcomment %}
+{% comment %} <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'pages/img/logo.png' %}" class="logo" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+
+                <!--NOTE: Home nav link -->
+                <li
+                    {% if '/' == request.path %}
+                        class="nav-item active mr-3"
+                    {% else %}
+                        class="nav-item mr-3"
+                    {% endif %}
+                >
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+
+                <!--NOTE: About nav link -->
+                <li
+                    {% if 'about' in request.path %}
+                        class="nav-item active mr-3"
+                    {% else %}
+                        class="nav-item mr-3"
+                    {% endif %}
+                >
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+
+                <!--NOTE: Switch navbar based on 'is logged in' || 'not logged in'-->
+
+                {% if user.is_authenticated %}
+
+                    <!--NOTE: My Dashboard/profile button -->
+                    <li
+                        {% if 'dashboard' in request.path %}
+                            class="nav-item active mr-3"
+                        {% else %}
+                            class="nav-item mr-3"
+                        {% endif %}
+                    >
+                        <a class="nav-link" href="{% url 'dashboard' %}">
+                            <i class="fas fa-list-ul"></i> My Dashboard
+                        </a>
+                    </li>
+
+                    <!--NOTE: Logout Link -->
+                    <li class="nav-item mr-3">
+
+                        <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+
+                        <form id="logout" action="{% url 'logout' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+
+                    </li>
+                
+                {% else %}
+
+                    <!--NOTE: Register button -->
+                    <li
+                        {% if 'register' in request.path %}
+                            class="nav-item active mr-3"
+                        {% else %}
+                            class="nav-item mr-3"
+                        {% endif %}
+                    >
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user-plus"></i> Sign Up
+                        </a>
+                    </li>
+
+                    <!--NOTE: Login button -->
+                    <li
+                        {% if 'login' in request.path %}
+                            class="nav-item active mr-3"
+                        {% else %}
+                            class="nav-item mr-3"
+                        {% endif %}
+                    >
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Login
+                        </a>
+                    </li>
+                
+                {% endif %}
+
+            </ul>
+        </div>
+    </div>
+</nav> {% endcomment %}
+{% comment %} ! commented part: to use as reference for navigation {% endcomment %}
