@@ -18,7 +18,7 @@ A folder named `venv` will appear in your tree directory
 source ./venv/bin/activate
 ```
 
-	NOTE: once you activate your environment, you should see the name of the virtual folder appear on your terminal
++ NOTE: once you activate your environment, you should see the name of the virtual folder appear on your terminal
 
 
 ## Deactivate your venv
@@ -26,4 +26,4 @@ source ./venv/bin/activate
 deactivate
 ```
 
-	NOTE: once you deactivate your environment, you should not see the name of the virtual folder on your terminal anymore
++ NOTE: once you deactivate your environment, you should not see the name of the virtual folder on your terminal anymore
