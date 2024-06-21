@@ -1,3 +1,126 @@
-{% extends "base.html" %} {% block content%}
-<h1>Hello from whoWeAre.html</h1>
+{% extends "base.html" %} {% load static %} {% block content%}
+<section class="bg-light py-3 py-md-5 py-xl-8">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="mb-4 display-5 text-center">Our Team</h2>
+        <p class="text-secondary mb-5 text-center lead fs-4">
+          We are a group of innovative, experienced, and proficient teams. You
+          will love to collaborate with us.
+        </p>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container overflow-hidden">
+    <div class="row gy-4 gy-lg-0 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-2">
+        <div
+          class="card border-0 border-bottom border-primary shadow-sm overflow-hidden"
+        >
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img
+                class="img-fluid"
+                loading="lazy"
+                src="{% static 'img/ftuernal.png' %}"
+                alt="Floriane Frtuernal Sabotinov"
+              />
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Floriane Frtuernal Sabotinov</h4>
+                <p class="text-secondary mb-0">Web Sockets & DB</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-2">
+        <div
+          class="card border-0 border-bottom border-primary shadow-sm overflow-hidden"
+        >
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img
+                class="img-fluid"
+                loading="lazy"
+                src="{% static 'img/medium_bahommer.png' %}"
+                alt="Baptiste Hommeril"
+              />
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Baptiste Hommeril</h4>
+                <p class="text-secondary mb-0">Blockchain & Pong Game</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-2">
+        <div
+          class="card border-0 border-bottom border-primary shadow-sm overflow-hidden"
+        >
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img
+                class="img-fluid"
+                loading="lazy"
+                src="{% static 'img/medium_larmenou.png' %}"
+                alt="Ludovic Armeroult"
+              />
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Ludovic Armeroult</h4>
+                <p class="text-secondary mb-0">Auth & CyberSecurity</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-2">
+        <div
+          class="card border-0 border-bottom border-primary shadow-sm overflow-hidden"
+        >
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img
+                class="img-fluid"
+                loading="lazy"
+                src="{% static 'img/medium_mede-mas.png' %}"
+                alt="Melchior De Massary"
+              />
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Melchior De Massary</h4>
+                <p class="text-secondary mb-0">Auth & CyberSecurity</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-2">
+        <div
+          class="card border-0 border-bottom border-primary shadow-sm overflow-hidden"
+        >
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img
+                class="img-fluid"
+                loading="lazy"
+                src="{% static 'img/medium_balbader.png' %}"
+                alt="Basil Albader"
+              />
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Basil Albader</h4>
+                <p class="text-secondary mb-0">User Management</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
