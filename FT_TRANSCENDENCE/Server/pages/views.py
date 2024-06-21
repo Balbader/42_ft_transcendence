@@ -11,5 +11,5 @@ def login(request):
 def about(request):
   return render(request, 'pages/about.html')
 
-def whoWeAre(request):
-  return render(request, 'pages/who-we-are.html')
+def howItWorks(request):
+  return render(request, 'pages/how-it-works.html')
