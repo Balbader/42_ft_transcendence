@@ -14,5 +14,6 @@
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.inlayHints.variableTypes": true,
-  "explorer.fileNesting.enabled": true
+  "explorer.fileNesting.enabled": true,
+  "gitlens.views.fileHistory.avatars": false
 }
