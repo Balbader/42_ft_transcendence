@@ -15,5 +15,6 @@
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.inlayHints.variableTypes": true,
   "explorer.fileNesting.enabled": true,
-  "gitlens.views.fileHistory.avatars": false
+  "gitlens.views.fileHistory.avatars": false,
+  "markdown.editor.pasteUrlAsFormattedLink.enabled": "always"
 }
