@@ -30,7 +30,6 @@ const createRouter = () => {
   };
 
   const currentRoute = () => state.at(-1);
-
   window.addEventListener("popstate", () => {
     state = [window.location.pathname.replace("/", "")];
   });
