@@ -2,7 +2,7 @@
   "prettier.useTabs": true,
   "editor.guides.highlightActiveIndentation": "always",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": null,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "vim.enableNeovim": true,
@@ -14,5 +14,27 @@
   "gitlens.views.fileHistory.avatars": false,
   "markdown.editor.pasteUrlAsFormattedLink.enabled": "always",
   "files.autoSave": "onFocusChange",
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "eslint.format.enable": true,
+  "eslint.probe": [
+		"astro",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"mdx",
+		"vue",
+		"markdown",
+		"json",
+		"jsonc",
+		"jsx"
+	],
+  "eslint.run": "onSave",
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+	"emmet.useInlineCompletions": true,
+	"eslint.lintTask.enable": true,
+	"eslint.useESLintClass": true,
+	"notebook.formatOnSave.enabled": true
 }
