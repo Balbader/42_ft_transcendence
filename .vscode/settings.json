@@ -7,14 +7,12 @@
   "editor.formatOnSave": true,
   "vim.enableNeovim": true,
   "editor.tabSize": 2,
-  "editor.fontFamily": "'FiraMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
   "editor.renderLineHighlight": "all",
   "editor.renderLineHighlightOnlyWhenFocus": true,
-  "python.analysis.inlayHints.callArgumentNames": "all",
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "python.analysis.inlayHints.pytestParameters": true,
-  "python.analysis.inlayHints.variableTypes": true,
   "explorer.fileNesting.enabled": true,
   "gitlens.views.fileHistory.avatars": false,
-  "markdown.editor.pasteUrlAsFormattedLink.enabled": "always"
+  "markdown.editor.pasteUrlAsFormattedLink.enabled": "always",
+  "files.autoSave": "onFocusChange",
+  "editor.fontLigatures": true
 }
