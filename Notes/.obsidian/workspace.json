@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend setup steps.md",
+                "file": "TODO''s/FRONT ISSUES.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "6af4fb9bf3cb2895",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Backend setup steps.md",
+                "file": "TODO''s/FRONT ISSUES.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Backend setup steps.md",
+                "file": "TODO''s/FRONT ISSUES.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,15 +139,32 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Backend setup steps.md"
+                "file": "TODO''s/FRONT ISSUES.md"
               }
             }
+          },
+          {
+            "id": "9af0c3a6c871ccfd",
+            "type": "leaf",
+            "state": {
+              "type": "online.larslockefeer.obsidian-plugin-todo",
+              "state": {}
+            }
+          },
+          {
+            "id": "476f2902a41daea1",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -157,12 +175,17 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "a418efe95d6419f7",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2024-06-22 14.04.58.excalidraw.md",
+    "todo.md",
     "TODO''s/FRONT ISSUES.md",
+    "todo",
+    "TODO''s/todo.md",
     "Backend setup steps.md",
     "Docs",
     "TODO''s",
