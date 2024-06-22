@@ -4,3 +4,4 @@
 + How to get response from back in order to update front?
 + Should nav-bar-in be SSR || CSR ?
 + How to display CS views in SSR index.html ?
++ 
