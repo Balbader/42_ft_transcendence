@@ -22,33 +22,30 @@ export class ProfileComponent extends LitElement {
       <section class="bg-light py-3 py-md-5 py-xl-8">
         <div class="container">
           <div class="row gy-4 gy-lg-0">
-            <div class="col-12 col-lg-4 col-xl-3">
+            <div class="col-12 col-lg-4 col-xl-3 shadow-sm">
               <div class="row gy-4">
                 <div class="col-12">
-                  <div class="card widget-card border-light shadow-sm">
+                  <div class="card widget-card border-dark-subtle shadow-sm">
                     <div class="card-header text-bg-dark">
                       Hello, Ethan Leo!
                     </div>
 
-                    <div class="card-body">
-                      <div class="text-center mb-3">
+                    <div class="card-body shadow-sm">
+                      <div class="text-center mb-3 shadow-sm">
                         <img
                           src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                           class="img-fluid rounded-circle"
                           alt="Luna John"
                         />
+                        <h5 class="text-center mb-1">Ethan Leo</h5>
                       </div>
-
-                      <h5 class="text-center mb-1">Ethan Leo</h5>
-
-                      <div class="d-grid m-0"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-lg-8 col-xl-9">
-              <div class="card widget-card border-light shadow-sm">
+              <div class="card widget-card border-dark shadow-sm">
                 <div class="card-body">
                   <div class="tab-content pt-4" id="profileTabContent">
                     <div

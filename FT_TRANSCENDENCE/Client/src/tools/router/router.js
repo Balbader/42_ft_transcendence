@@ -1,15 +1,11 @@
-import about from "../../../views/about.js";
-import home from "../../../views/home.js";
-import whoWeAre from "../../../views/who-we-are.js";
-import login from "../../../views/login.js";
-import ui_lib from "../../views/ui-lib.js";
+import ProfilePage from "../../views/profile-page/profile-page.js";
+import SettingsPage from "../../views/settings-page/settings-page.js";
+import PasswordChangePage from "../../views/pwd-change-page/password-change-page.js";
 
 const routes = {
-  home,
-  about,
-  whoWeAre,
-  login,
-  ui_lib,
+  ProfilePage,
+  SettingsPage,
+  PasswordChangePage,
 };
 
 const createRouter = () => {

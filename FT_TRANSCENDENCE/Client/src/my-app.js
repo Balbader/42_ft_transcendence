@@ -1,31 +1,39 @@
-import "./views/home-page/home-page.js";
-import "./views/login-page/login-page.js";
 import "./views/profile-page/profile-page.js";
 import "./views/settings-page/settings-page.js";
 import "./views/pwd-change-page/password-change-page.js";
+import "./components/nav-bar/nav-bar-in.js";
+import "./components/footer/footer-in.js";
 import { LitElement, html, css } from "lit";
 
 export class MyApp extends LitElement {
   constructor() {
     super();
+    this.isLoggedIn = {
+      // isLoggedIn: // ! Get auth response if user is logged in or not
+    };
+    this.navBar = {
+      // navBar: (navBar, isLoggedIn) => {
+      //   this.isLoggedIn
+      //     ? (navBar = <nav-bar-in></nav-bar-in>)
+      //     : (navBar = <nav-bar-out></nav-bar-out>);
+      //   return navBar;
+      // },
+    };
   }
 
   render() {
     return html`
-      <h1>Home Page</h1>
-      <home-page></home-page>
-      <br />
-      <h1>Login Page</h1>
-      <login-page></login-page>
-      <br />
-      <h1>Main Profile Page</h1>
+      <nav-bar-in></nav-bar-in>
       <profile-page></profile-page>
+      <footer-in></footer-in>
       <br />
-      <h1>User Settings Page</h1>
+      <nav-bar-in></nav-bar-in>
       <settings-page></settings-page>
+      <footer-in></footer-in>
       <br />
-      <h1>User Password Reset Page</h1>
+      <nav-bar-in></nav-bar-in>
       <password-change-page></password-change-page>
+      <footer-in></footer-in>
     `;
   }
 }

@@ -22,20 +22,18 @@ export class NavBarIn extends LitElement {
 
   render() {
     return html`
-      <nav class="bg-dark navbar navbar-expand-lg navbar-dark mt-4">
+      <nav class="bg-dark navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-				<button
-            data-mdb-collapse-init
-            class="navbar-toggler"
-            type="button"
-              FT_TRANSCENDENCE
-            data-mdb-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarTogglerDemo02"
+						aria-controls="navbarTogglerDemo02"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
 					>
+						<span class="navbar-toggler-icon"></span>
 					</button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -74,16 +72,13 @@ export class NavBarIn extends LitElement {
               </a>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Profile</a>
+                  <a class="nav-link" href="ProfilePage">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Dashboard</a>
+                  <a class="nav-link" href="SettingsPage">Settings</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Password Reset</a>
+                  <a class="nav-link" href="PasswordChangePage">Password Reset</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Log Out</a>
@@ -91,7 +86,7 @@ export class NavBarIn extends LitElement {
               </ul>
             </div>
 
-              <div class="dropdown">
+              <div class="">
                 <a
                   data-mdb-dropdown-init
                   class=" d-flex align-items-center pr-5"

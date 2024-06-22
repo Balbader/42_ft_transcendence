@@ -4,6 +4,10 @@ import "../footer/footer-out.js";
 import { LitElement, html, css } from "lit";
 
 export class HomeComponent extends LitElement {
+  constructor() {
+    super();
+  }
+
   render() {
     return html`
       <nav-bar-out></nav-bar-out>
