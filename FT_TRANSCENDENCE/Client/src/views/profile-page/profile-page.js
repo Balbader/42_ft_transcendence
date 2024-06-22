@@ -7,7 +7,7 @@ export class ProfilePage extends LitElement {
   }
 
   render() {
-    return html` <dashboard-page></dashboard-page> `;
+		return html` <dashboard-page></dashboard-page> `;
   }
 }
 customElements.define("profile-page", ProfilePage);
