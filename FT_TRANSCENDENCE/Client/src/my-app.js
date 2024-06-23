@@ -1,3 +1,7 @@
+// import renderRoute from './tools/router/router.js';
+// import router from './tools/router/router.js';
+
+import { hydrate } from '@lit-labs/ssr-client';
 import './views/profile-page/profile-page.js';
 import './views/settings-page/settings-page.js';
 import './views/pwd-change-page/password-change-page.js';
@@ -14,8 +18,9 @@ export class MyApp extends LitElement {
 	}
 
 	render() {
+		const navIn = html`<nav-bar-in></nav-bar-in>`;
 		return html`
-			<nav-bar-in></nav-bar-in>
+			${navIn}
 
 			<!--if (link pressed == pageName) -> load page -->
 			<profile-page></profile-page>
