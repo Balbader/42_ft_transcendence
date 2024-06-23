@@ -13,11 +13,16 @@ export class NavBarIn extends LitElement {
     return [globalStyle, css``];
   }
 
+	static properties = {
+      path: "./src/components/nav-bar/nav-bar-assets/ping-pong (1).png",
+			dashboardLink: "",
+	}
+	
+
   constructor() {
     super();
-    this.imgPath = {
-      path: "./src/components/nav-bar/nav-bar-assets/ping-pong (1).png",
-    };
+    this.imgPath = path;
+		this.dashboardLink = dashboardLink;
   }
 
   render() {
