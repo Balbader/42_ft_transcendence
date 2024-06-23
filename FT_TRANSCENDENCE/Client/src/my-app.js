@@ -24,15 +24,11 @@ export class MyApp extends LitElement {
   render() {
     return html`
       <nav-bar-in></nav-bar-in>
+
+      <!--if (link pressed == pageName) -> load page -->
+
       <profile-page></profile-page>
-      <footer-in></footer-in>
-      <br />
-      <nav-bar-in></nav-bar-in>
-      <settings-page></settings-page>
-      <footer-in></footer-in>
-      <br />
-      <nav-bar-in></nav-bar-in>
-      <password-change-page></password-change-page>
+
       <footer-in></footer-in>
     `;
   }
