@@ -1,8 +1,8 @@
 {
 	"prettier.useTabs": true,
 	"editor.guides.highlightActiveIndentation": "always",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"notebook.defaultFormatter": null,
+	"editor.defaultFormatter": "biomejs.biome",
+	"notebook.defaultFormatter": "biomejs.biome",
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"vim.enableNeovim": true,
@@ -40,5 +40,8 @@
 	"color-highlight.markerType": "background",
 	"highlightLine.borderStyle": "solid",
 	"highlightLine.borderColor": "#535353",
-	"highlightLine.borderWidth": ".1px"
+	"highlightLine.borderWidth": ".1px",
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
 }
