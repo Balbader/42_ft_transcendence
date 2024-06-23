@@ -1,32 +1,27 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html, css } from 'lit';
 
 export class NavBarIn extends LitElement {
-  static get styles() {
-    const { cssRules } = document.styleSheets[0];
+	static get styles() {
+		const { cssRules } = document.styleSheets[0];
 
-    const globalStyle = css([
-      Object.values(cssRules)
-        .map((rule) => rule.cssText)
-        .join("\n"),
-    ]);
+		const globalStyle = css([
+			Object.values(cssRules)
+				.map(rule => rule.cssText)
+				.join('\n'),
+		]);
 
-    return [globalStyle, css``];
-  }
-
-	static properties = {
-      path: "./src/components/nav-bar/nav-bar-assets/ping-pong (1).png",
-			dashboardLink: "",
+		return [globalStyle, css``];
 	}
-	
 
-  constructor() {
-    super();
-    this.imgPath = path;
-		this.dashboardLink = dashboardLink;
-  }
+	constructor() {
+		super();
+		this.imgPath = {
+			path: './src/components/nav-bar/nav-bar-assets/ping-pong (1).png',
+		};
+	}
 
-  render() {
-    return html`
+	render() {
+		return html`
       <nav class="bg-dark navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
 					<button
@@ -76,18 +71,23 @@ export class NavBarIn extends LitElement {
                 <i class="fas fa-shopping-cart"></i>
               </a>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
                 <li class="nav-item">
                   <a class="nav-link" href="ProfilePage">Dashboard</a>
                 </li>
+
                 <li class="nav-item">
-                  <a class="nav-link" href="SettingsPage">Settings</a>
+									<a class="nav-link" href="SettingsPage">Settings</a>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="PasswordChangePage">Password Reset</a>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="#">Log Out</a>
                 </li>
+
               </ul>
             </div>
 
@@ -115,6 +115,6 @@ export class NavBarIn extends LitElement {
         </div>
       </nav>
     `;
-  }
+	}
 }
-customElements.define("nav-bar-in", NavBarIn);
+customElements.define('nav-bar-in', NavBarIn);
