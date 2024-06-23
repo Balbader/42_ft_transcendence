@@ -12,16 +12,13 @@ import { LitElement, html } from 'lit';
 export class MyApp extends LitElement {
 	constructor() {
 		super();
-		this.isLoggedIn = {
-			// isLoggedIn: // ! Get auth response if user is logged in or not
-		};
+		// * Assign a component to a variable
+		this.navIn = html`<nav-bar-in></nav-bar-in>`;
 	}
 
 	render() {
-		const navIn = html`<nav-bar-in></nav-bar-in>`;
 		return html`
-			${navIn}
-
+			${this.navIn}
 			<!--if (link pressed == pageName) -> load page -->
 			<profile-page></profile-page>
 
