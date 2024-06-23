@@ -1,9 +1,9 @@
-import './views/profile-page/profile-page.js';
-import './views/settings-page/settings-page.js';
-import './views/pwd-change-page/password-change-page.js';
-import './components/nav-bar/nav-bar-in.js';
-import './components/footer/footer-in.js';
-import { LitElement, html } from 'lit';
+import "./views/profile-page/profile-page.js";
+import "./views/settings-page/settings-page.js";
+import "./views/pwd-change-page/password-change-page.js";
+import "./components/nav-bar/nav-bar-in.js";
+import "./components/footer/footer-in.js";
+import { LitElement, html } from "lit";
 
 export class MyApp extends LitElement {
 	constructor() {
@@ -18,11 +18,11 @@ export class MyApp extends LitElement {
 			<nav-bar-in></nav-bar-in>
 
 			<!--if (link pressed == pageName) -> load page -->
-
 			<profile-page></profile-page>
 
 			<footer-in></footer-in>
 		`;
 	}
 }
-customElements.define('my-app', MyApp);
+
+customElements.define("my-app", MyApp);
