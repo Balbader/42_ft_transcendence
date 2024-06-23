@@ -1,8 +1,8 @@
 {
 	"prettier.useTabs": true,
 	"editor.guides.highlightActiveIndentation": "always",
-	"editor.defaultFormatter": "biomejs.biome",
-	"notebook.defaultFormatter": "biomejs.biome",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"notebook.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"vim.enableNeovim": true,
@@ -42,6 +42,12 @@
 	"highlightLine.borderColor": "#535353",
 	"highlightLine.borderWidth": ".1px",
 	"[javascript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	}
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.configPath": "",
+	"workbench.editor.languageDetection": false,
+	"workbench.editor.historyBasedLanguageDetection": false,
+	"workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
+	"editor.defaultFoldingRangeProvider": "esbenp.prettier-vscode",
+	"eslint.codeActionsOnSave.rules": null
 }
