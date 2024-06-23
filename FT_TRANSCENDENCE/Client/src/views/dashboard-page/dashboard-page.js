@@ -1,13 +1,13 @@
-import "../../components/dashboard/dashboard-component.js";
-import { LitElement, html, css } from "lit";
+import '../../components/dashboard/dashboard-component.js';
+import { LitElement, html, css } from 'lit';
 
 export class DashboardPage extends LitElement {
-  constructor() {
-    super();
-  }
+	constructor() {
+		super();
+	}
 
-  render() {
-    return html` <dashboard-component></dashboard-component> `;
-  }
+	render() {
+		return html` <dashboard-component></dashboard-component> `;
+	}
 }
-customElements.define("dashboard-page", DashboardPage);
+customElements.define('dashboard-page', DashboardPage);

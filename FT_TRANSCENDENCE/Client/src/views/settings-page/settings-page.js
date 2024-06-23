@@ -1,13 +1,13 @@
-import "../../components/settings/settings-component.js";
-import { LitElement, html, css } from "lit";
+import '../../components/settings/settings-component.js';
+import { LitElement, html, css } from 'lit';
 
 export class SettingsPage extends LitElement {
-  constructor() {
-    super();
-  }
+	constructor() {
+		super();
+	}
 
-  render() {
-    return html` <settings-component></settings-component> `;
-  }
+	render() {
+		return html` <settings-component></settings-component> `;
+	}
 }
-customElements.define("settings-page", SettingsPage);
+customElements.define('settings-page', SettingsPage);

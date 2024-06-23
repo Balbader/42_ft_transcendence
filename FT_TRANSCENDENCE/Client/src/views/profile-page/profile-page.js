@@ -1,13 +1,13 @@
-import "../dashboard-page/dashboard-page.js";
-import { LitElement, html, css } from "lit";
+import '../dashboard-page/dashboard-page.js';
+import { LitElement, html, css } from 'lit';
 
 export class ProfilePage extends LitElement {
-  constructor() {
-    super();
-  }
+	constructor() {
+		super();
+	}
 
-  render() {
-    return html` <dashboard-page></dashboard-page> `;
-  }
+	render() {
+		return html` <dashboard-page></dashboard-page> `;
+	}
 }
-customElements.define("profile-page", ProfilePage);
+customElements.define('profile-page', ProfilePage);
