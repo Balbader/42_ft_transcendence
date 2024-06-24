@@ -1,5 +1,5 @@
 import '../../components/home/home-component.js';
-import { LitElement, html, css } from 'lit';
+import { LitElement, html } from 'lit';
 
 export class HomePage extends LitElement {
 	constructor() {
