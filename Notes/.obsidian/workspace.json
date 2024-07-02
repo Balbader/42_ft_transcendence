@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "a418efe95d6419f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TODO''s/FRONT ISSUES.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "6af4fb9bf3cb2895",
@@ -179,7 +165,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a418efe95d6419f7",
+  "active": "6a42752d4fc0b6c3",
   "lastOpenFiles": [
     "Excalidraw/Drawing 2024-06-22 14.04.58.excalidraw.md",
     "todo.md",
