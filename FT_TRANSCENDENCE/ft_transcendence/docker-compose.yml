@@ -1,0 +1,10 @@
+services:
+  backend:
+    container_name: trans_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/app
