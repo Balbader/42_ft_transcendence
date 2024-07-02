@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "django-bootstrap-v5",
     "djangorestframework",
     "django-staticfiles",
+    "pages.apps.PagesConfig",
 ]
 
 MIDDLEWARE = [
