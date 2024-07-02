@@ -25,9 +25,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django-bootstrap-v5",
-    "djangorestframework",
-    "django-staticfiles",
     "pages.apps.PagesConfig",
 ]
 
