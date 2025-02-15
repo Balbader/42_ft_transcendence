@@ -1,4 +1,0 @@
-Django
-django-bootstrap-v5
-djangorestframework
-django-staticfiles
